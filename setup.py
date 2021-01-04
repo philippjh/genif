@@ -34,13 +34,8 @@ class CMakeBuild(build_ext):
     def build_extension(self, ext):
         extdir = os.path.abspath(os.path.dirname(self.get_ext_fullpath(ext.name)))
         cmake_args = ['-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=' + extdir,
-                      '-DPYTHON_EXECUTABLE=' + sys.executable,
-                      '-DCREATE_FP64_TARGETS=ON',
-                      '-DCREATE_PYTHON_LIB=ON']
-
-        self.debug = False
-        cfg = 'Debug' if self.debug else 'Release'
-        build_args = ['--config', cfg]
+                      '-DPYTHON_EXECUTABLE=' + sys.executable]
+        build_args = ['--config', 'Release']
 
         if platform.system() == "Windows":
             cmake_args += ['-DCMAKE_LIBRARY_OUTPUT_DIRECTORY_{}={}'.format(cfg.upper(), extdir)]
@@ -48,7 +43,7 @@ class CMakeBuild(build_ext):
                 cmake_args += ['-A', 'x64']
             build_args += ['--', '/m']
         else:
-            cmake_args += ['-DCMAKE_BUILD_TYPE=' + cfg]
+            cmake_args += ['-DCMAKE_BUILD_TYPE=Release']
             build_args += ['--', '-j', str(multiprocessing.cpu_count())]
 
         env = os.environ.copy()
