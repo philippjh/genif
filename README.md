@@ -7,7 +7,13 @@ GIF has originally been proposed in:
 
 ## Install from the Python Package Index (PyPI, recommended)
 
-Not yet available.
+We provide Linux wheel packages for various Python versions, which can be installed like this:
+
+```
+pip install genif
+```
+
+Windows or macOS builds are currently **not** provided. Please resort to installation from source, if you are either using Windows or macOS.
 
 ## Install from source
 
@@ -21,4 +27,4 @@ Not yet available.
 
 - Recursively clone this repository by issueing `git clone --recurse-submodules git@github.com:philippjh/genif.git`
 - Change your working directory to the root of the repository. Run `pip3 install .`
-- The Python package manager will now build the package and install it to your user directory.
+- The Python package manager will now build and install the package.
