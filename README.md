@@ -19,6 +19,6 @@ Not yet available.
 
 ### Build steps
 
-- Recursively clone this repository by issueing `git clone --recurse-submodules git@github.com:philippjh/pygif.git`
+- Recursively clone this repository by issueing `git clone --recurse-submodules git@github.com:philippjh/genif.git`
 - Change your working directory to the root of the repository. Run `pip3 install .`
 - The Python package manager will now build the package and install it to your user directory.

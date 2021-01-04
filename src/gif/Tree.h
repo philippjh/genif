@@ -1,9 +1,9 @@
-#ifndef PYGIF_TREE_H
-#define PYGIF_TREE_H
+#ifndef GENIF_TREE_H
+#define GENIF_TREE_H
 
 #include <src/io/DataTypeHandling.h>
 
-namespace pygif {
+namespace genif {
     struct Tree {
         // Tree structure.
         std::vector<Tree*> nodes;
@@ -25,4 +25,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_GIF_TREE_H
+#endif // GENIF_GIF_TREE_H

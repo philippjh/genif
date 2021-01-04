@@ -1,9 +1,9 @@
-#ifndef PYGIF_GIF_GIFMODEL_H
-#define PYGIF_GIF_GIFMODEL_H
+#ifndef GENIF_GIF_GIFMODEL_H
+#define GENIF_GIF_GIFMODEL_H
 
 #include <nanoflann.hpp>
 
-namespace pygif {
+namespace genif {
     /**
      * A struct comprising the model information for Generalized Isolation Forests.
      */
@@ -31,4 +31,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_GIF_GIFMODEL_H
+#endif // GENIF_GIF_GIFMODEL_H

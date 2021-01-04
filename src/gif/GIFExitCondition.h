@@ -1,12 +1,12 @@
-#ifndef PYGIF_GIFEXITCONDITION_H
-#define PYGIF_GIFEXITCONDITION_H
+#ifndef GENIF_GIFEXITCONDITION_H
+#define GENIF_GIFEXITCONDITION_H
 
 #include "Tree.h"
 #include <src/kernels/Kernel.h>
 #include <src/kernels/MaternKernel.h>
 #include <src/kernels/RBFKernel.h>
 
-namespace pygif {
+namespace genif {
     /**
      * This class provides an interface to describe different exit conditions.
      */
@@ -85,4 +85,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_GIFEXITCONDITION_H
+#endif // GENIF_GIFEXITCONDITION_H

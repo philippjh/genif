@@ -1,9 +1,9 @@
-#ifndef PYGIF_OUTLIERDETECTIONRESULT_H
-#define PYGIF_OUTLIERDETECTIONRESULT_H
+#ifndef GENIF_OUTLIERDETECTIONRESULT_H
+#define GENIF_OUTLIERDETECTIONRESULT_H
 
 #include <src/io/DataTypeHandling.h>
 
-namespace pygif {
+namespace genif {
     /**
      * A struct holding a outlier detection result.
      */
@@ -21,4 +21,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_OUTLIERDETECTIONRESULT_H
+#endif // GENIF_OUTLIERDETECTIONRESULT_H

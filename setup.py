@@ -52,17 +52,17 @@ class CMakeBuild(build_ext):
         if not os.path.exists(self.build_temp):
             os.makedirs(self.build_temp)
         subprocess.check_call(['cmake', ext.sourcedir] + cmake_args, cwd=self.build_temp, env=env)
-        subprocess.check_call(['cmake', '--build', '.', '--target', 'pygif'] + build_args, cwd=self.build_temp)
+        subprocess.check_call(['cmake', '--build', '.', '--target', 'genif'] + build_args, cwd=self.build_temp)
 
 
 setup(
-    name='pygif',
+    name='genif',
     version='0.0.1',
     author='Philipp-Jan Honysz',
     author_email='philipp.honysz@udo.edu',
     description='Generalized Isolation Forest',
     long_description='',
-    ext_modules=[CMakeExtension('pygif')],
+    ext_modules=[CMakeExtension('genif')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False
 )

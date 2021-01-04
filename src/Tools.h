@@ -1,5 +1,5 @@
-#ifndef PYGIF_TOOLS_H_
-#define PYGIF_TOOLS_H_
+#ifndef GENIF_TOOLS_H_
+#define GENIF_TOOLS_H_
 
 #include <fstream>
 #include <iostream>
@@ -10,7 +10,7 @@
 #include <thread>
 #include <vector>
 
-namespace pygif {
+namespace genif {
         /**
          * Provide different handy tools to accomplish general tasks in this framework.
          */
@@ -41,4 +41,4 @@ namespace pygif {
         };
     }
 
-#endif /* PYGIF_TOOLS_H_ */
+#endif /* GENIF_TOOLS_H_ */

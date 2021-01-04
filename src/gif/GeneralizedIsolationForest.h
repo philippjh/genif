@@ -1,5 +1,5 @@
-#ifndef PYGIF_GENERALIZEDISOLATIONFOREST_H
-#define PYGIF_GENERALIZEDISOLATIONFOREST_H
+#ifndef GENIF_GENERALIZEDISOLATIONFOREST_H
+#define GENIF_GENERALIZEDISOLATIONFOREST_H
 
 #include "GeneralizedIsolationTree.h"
 #include <src/BaggingEnsemble.h>
@@ -8,7 +8,7 @@
 #include <src/Tools.h>
 #include <src/gif/GIFModel.h>
 
-namespace pygif {
+namespace genif {
     class GeneralizedIsolationForest : public Learner<std::vector<GIFModel>, VectorX> {
     public:
         /**
@@ -25,7 +25,7 @@ namespace pygif {
         GeneralizedIsolationForest(unsigned int k, unsigned int nModels, unsigned int sampleSize, const std::string& kernelId, const VectorX& kernelScaling, data_t sigma,
                                    int workerCount = -1) :
             _exitCondition(kernelId, kernelScaling, sigma),
-            _gTree(k, _exitCondition, pygif::Tools::handleWorkerCount(workerCount)), _gtrBagging(_gTree, nModels, sampleSize, pygif::Tools::handleWorkerCount(workerCount)) {
+            _gTree(k, _exitCondition, genif::Tools::handleWorkerCount(workerCount)), _gtrBagging(_gTree, nModels, sampleSize, genif::Tools::handleWorkerCount(workerCount)) {
         }
 
         /**
@@ -78,4 +78,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_GENERALIZEDISOLATIONFOREST_H
+#endif // GENIF_GENERALIZEDISOLATIONFOREST_H

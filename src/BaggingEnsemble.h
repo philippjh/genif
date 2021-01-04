@@ -1,11 +1,11 @@
-#ifndef PYGIF_BAGGINGENSEMBLE_H
-#define PYGIF_BAGGINGENSEMBLE_H
+#ifndef GENIF_BAGGINGENSEMBLE_H
+#define GENIF_BAGGINGENSEMBLE_H
 
 #include <chrono>
 #include <random>
 #include <src/Learner.h>
 
-namespace pygif {
+namespace genif {
     /**
      * Provides a generic Bagging ensemble, that randomly subsamples given datasets and outputs a vector of learned models and predictions.
      *
@@ -122,4 +122,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_BAGGINGENSEMBLE_H
+#endif // GENIF_BAGGINGENSEMBLE_H

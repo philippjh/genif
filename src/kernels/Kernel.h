@@ -1,9 +1,9 @@
-#ifndef PYGIF_KERNEL_H
-#define PYGIF_KERNEL_H
+#ifndef GENIF_KERNEL_H
+#define GENIF_KERNEL_H
 
 #include "Kernel.h"
 
-namespace pygif {
+namespace genif {
     class Kernel {
     public:
         /**
@@ -21,4 +21,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_KERNEL_H
+#endif // GENIF_KERNEL_H

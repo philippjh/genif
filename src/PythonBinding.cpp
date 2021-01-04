@@ -6,8 +6,8 @@
 
 namespace py = pybind11;
 
-namespace pygif {
-    PYBIND11_MODULE(pygif, m) {
+namespace genif {
+    PYBIND11_MODULE(genif, m) {
         // Definition: Generalized Isolation Forest
         using GIFModel_VecX_Learner = Learner<std::vector<GIFModel>, VectorX>;
         py::class_<GIFModel_VecX_Learner>(m, "GIFModel_ODR_Learner");

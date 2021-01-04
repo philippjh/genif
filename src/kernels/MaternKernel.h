@@ -1,9 +1,9 @@
-#ifndef PYGIF_MATERNKERNEL_H
-#define PYGIF_MATERNKERNEL_H
+#ifndef GENIF_MATERNKERNEL_H
+#define GENIF_MATERNKERNEL_H
 
 #include "Kernel.h"
 
-namespace pygif {
+namespace genif {
     /**
      * Provides an implementation of the Matern kernel.
      */
@@ -81,4 +81,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_MATERNKERNEL_H
+#endif // GENIF_MATERNKERNEL_H

@@ -1,9 +1,9 @@
-#ifndef PYGIF_RBFKERNEL_H
-#define PYGIF_RBFKERNEL_H
+#ifndef GENIF_RBFKERNEL_H
+#define GENIF_RBFKERNEL_H
 
 #include "Kernel.h"
 
-namespace pygif {
+namespace genif {
     class RBFKernel : public Kernel {
     public:
         using Kernel::operator();
@@ -70,4 +70,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_RBFKERNEL_H
+#endif // GENIF_RBFKERNEL_H

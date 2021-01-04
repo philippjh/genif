@@ -1,9 +1,9 @@
-#ifndef PYGIF_LEARNER_H
-#define PYGIF_LEARNER_H
+#ifndef GENIF_LEARNER_H
+#define GENIF_LEARNER_H
 
 #include <src/io/DataTypeHandling.h>
 
-namespace pygif {
+namespace genif {
     /**
      * Provides a standardized interface for learning algorithms.
      */
@@ -83,4 +83,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_LEARNER_H
+#endif // GENIF_LEARNER_H

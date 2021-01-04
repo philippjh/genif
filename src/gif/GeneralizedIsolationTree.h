@@ -1,5 +1,5 @@
-#ifndef PYGIF_GENERALIZEDISOLATIONTREE_H
-#define PYGIF_GENERALIZEDISOLATIONTREE_H
+#ifndef GENIF_GENERALIZEDISOLATIONTREE_H
+#define GENIF_GENERALIZEDISOLATIONTREE_H
 
 #include "GIFExitCondition.h"
 #include "GIFModel.h"
@@ -10,7 +10,7 @@
 #include <src/Learner.h>
 #include <src/OutlierDetectionResult.h>
 
-namespace pygif {
+namespace genif {
     class GeneralizedIsolationTree : public Learner<GIFModel, OutlierDetectionResult> {
     public:
         /**
@@ -254,4 +254,4 @@ namespace pygif {
     };
 }
 
-#endif // PYGIF_GENERALIZEDISOLATIONTREE_H
+#endif // GENIF_GENERALIZEDISOLATIONTREE_H
