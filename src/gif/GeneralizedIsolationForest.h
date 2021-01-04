@@ -13,14 +13,14 @@ namespace genif {
     public:
         /**
          * Instantiates a GeneralizedIsolationForest.
-         * @param k The number of representatives to find for each node.
+         * @param k The number of representatives to find for each node of the tree.
          * @param nModels The number of trees to fit.
          * @param sampleSize The sample size to consider for every tree to be fit.
-         * @param kernelId Name of the kernel to use (possible value: rbf, matern-d1, matern-d3, matern-d5).
+         * @param kernelId Name of the kernel to use (possible values: rbf, matern-d1, matern-d3, matern-d5).
          * @param kernelScaling Vector of scaling values for the kernel to be used (scalar for RBF, d-dimensional vector for Matern kernels - d being the number of dimensions of
          * the input vectors).
-         * @param sigma Average kernel value, which should be exceeded for the exit condition to apply.
-         * @param workerCount Number of workers to consider.
+         * @param sigma Average pairwise kernel values of observations in a data sub-region, which should be exceeded for the exit condition to apply.
+         * @param workerCount Number of parallel workers to consider (-1 defaults to all available cores).
          */
         GeneralizedIsolationForest(unsigned int k, unsigned int nModels, unsigned int sampleSize, const std::string& kernelId, const VectorX& kernelScaling, data_t sigma,
                                    int workerCount = -1) :
