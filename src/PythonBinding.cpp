@@ -14,9 +14,9 @@ namespace genif {
         py::class_<GeneralizedIsolationForest, GIFModel_VecX_Learner>(m, "GeneralizedIsolationForest")
             .def(py::init<unsigned int, unsigned int, unsigned int, std::string, VectorX&, data_t, int>(), py::arg("k"), py::arg("n_models"), py::arg("sample_size"),
                  py::arg("kernel"), py::arg("kernel_scaling"), py::arg("sigma"), py::arg("worker_count") = -1)
-            .def("fit", &GeneralizedIsolationForest::fit)
-            .def("predict", &GeneralizedIsolationForest::predict)
-            .def("fit_predict", &GeneralizedIsolationForest::fitPredict)
+            .def("fit", &GeneralizedIsolationForest::fit, py::arg("X"))
+            .def("predict", &GeneralizedIsolationForest::predict, py::arg("X"))
+            .def("fit_predict", &GeneralizedIsolationForest::fitPredict, py::arg("X"))
             .def_property_readonly("models", &GeneralizedIsolationForest::getModel);
     }
 }
