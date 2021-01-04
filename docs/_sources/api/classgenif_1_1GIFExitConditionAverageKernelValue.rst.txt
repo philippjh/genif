@@ -1,0 +1,25 @@
+.. _exhale_class_classgenif_1_1GIFExitConditionAverageKernelValue:
+
+Class GIFExitConditionAverageKernelValue
+========================================
+
+- Defined in :ref:`file_src_gif_GIFExitCondition.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public genif::GIFExitCondition`` (:ref:`exhale_class_classgenif_1_1GIFExitCondition`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::GIFExitConditionAverageKernelValue
+   :members:
+   :protected-members:
+   :undoc-members:

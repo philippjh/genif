@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class GeneralizedIsolationTree &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class GIFExitCondition" href="classgenif_1_1GIFExitCondition.html" />
+    <link rel="prev" title="Class GeneralizedIsolationForest" href="classgenif_1_1GeneralizedIsolationForest.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">C++ API</a> &raquo;</li>
+        
+      <li>Class GeneralizedIsolationTree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classgenif_1_1GeneralizedIsolationTree.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-generalizedisolationtree">
+<span id="exhale-class-classgenif-1-1generalizedisolationtree"></span><h1>Class GeneralizedIsolationTree<a class="headerlink" href="#class-generalizedisolationtree" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#file-src-gif-generalizedisolationtree-h"><span class="std std-ref">File GeneralizedIsolationTree.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">genif::Learner&lt;</span> <span class="pre">GIFModel,</span> <span class="pre">OutlierDetectionResult</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classgenif_1_1Learner.html#exhale-class-classgenif-1-1learner"><span class="std std-ref">Template Class Learner</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv4N5genif24GeneralizedIsolationTreeE">
+<span id="_CPPv3N5genif24GeneralizedIsolationTreeE"></span><span id="_CPPv2N5genif24GeneralizedIsolationTreeE"></span><span id="genif::GeneralizedIsolationTree"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree"></span><em class="property">class </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">GeneralizedIsolationTree</code> : <em class="property">public</em> genif::<a class="reference internal" href="classgenif_1_1Learner.html#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;<a class="reference internal" href="structgenif_1_1GIFModel.html#_CPPv4N5genif8GIFModelE" title="genif::GIFModel">GIFModel</a>, <a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#_CPPv4N5genif22OutlierDetectionResultE" title="genif::OutlierDetectionResult">OutlierDetectionResult</a>&gt;<a class="headerlink" href="#_CPPv4N5genif24GeneralizedIsolationTreeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5genif24GeneralizedIsolationTree24GeneralizedIsolationTreeEjRK16GIFExitConditionj">
+<span id="_CPPv3N5genif24GeneralizedIsolationTree24GeneralizedIsolationTreeEjRK16GIFExitConditionj"></span><span id="_CPPv2N5genif24GeneralizedIsolationTree24GeneralizedIsolationTreeEjRK16GIFExitConditionj"></span><span id="genif::GeneralizedIsolationTree::GeneralizedIsolationTree__unsigned-i.GIFExitConditionCR.unsigned-i"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1a2691fc6986d0bf422ce25d96d5fe1e85"></span><code class="sig-name descname">GeneralizedIsolationTree</code><span class="sig-paren">(</span>unsigned int <em>k</em>, <em class="property">const</em> <a class="reference internal" href="classgenif_1_1GIFExitCondition.html#_CPPv4N5genif16GIFExitConditionE" title="genif::GIFExitCondition">GIFExitCondition</a> &amp;<em>exitCondition</em>, unsigned int <em>workerCount</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif24GeneralizedIsolationTree24GeneralizedIsolationTreeEjRK16GIFExitConditionj" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructs an instance of <a class="reference internal" href="#classgenif_1_1GeneralizedIsolationTree"><span class="std std-ref">GeneralizedIsolationTree</span></a>. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code>: The number of representatives to find for each node. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exitCondition</span></code>: An exit condition, which controls, when tree induction is stopped. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workerCount</span></code>: Number of workers to consider. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif24GeneralizedIsolationTree3fitERK7MatrixX">
+<span id="_CPPv3N5genif24GeneralizedIsolationTree3fitERK7MatrixX"></span><span id="_CPPv2N5genif24GeneralizedIsolationTree3fitERK7MatrixX"></span><span id="genif::GeneralizedIsolationTree::fit__MatrixXCR"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1a11b18110ed3bee71bf23a9f6a430d7c2"></span><a class="reference internal" href="classgenif_1_1Learner.html#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;<a class="reference internal" href="structgenif_1_1GIFModel.html#_CPPv4N5genif8GIFModelE" title="genif::GIFModel">GIFModel</a>, <a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#_CPPv4N5genif22OutlierDetectionResultE" title="genif::OutlierDetectionResult">OutlierDetectionResult</a>&gt; &amp;<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N5genif24GeneralizedIsolationTree3fitERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fits the tree using a given dataset. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A reference to this object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset to use for fitting. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif24GeneralizedIsolationTree8findTreeERK7MatrixX">
+<span id="_CPPv3N5genif24GeneralizedIsolationTree8findTreeERK7MatrixX"></span><span id="_CPPv2N5genif24GeneralizedIsolationTree8findTreeERK7MatrixX"></span><span id="genif::GeneralizedIsolationTree::findTree__MatrixXCR"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1a34c1c14d4c580f1a256d6cbd89d711c4"></span><a class="reference internal" href="structgenif_1_1Tree.html#_CPPv4N5genif4TreeE" title="genif::Tree">Tree</a> *<code class="sig-name descname">findTree</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif24GeneralizedIsolationTree8findTreeERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Finds a tree using a given dataset. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A raw pointer to the induced tree. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset to create the tree from. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif24GeneralizedIsolationTree8getModelEv">
+<span id="_CPPv3NK5genif24GeneralizedIsolationTree8getModelEv"></span><span id="_CPPv2NK5genif24GeneralizedIsolationTree8getModelEv"></span><span id="genif::GeneralizedIsolationTree::getModelC"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1a5b0d5554240acf115742da90ff206909"></span><a class="reference internal" href="structgenif_1_1GIFModel.html#_CPPv4N5genif8GIFModelE" title="genif::GIFModel">GIFModel</a> <code class="sig-name descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK5genif24GeneralizedIsolationTree8getModelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns a previously fitted model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>As stated above. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif24GeneralizedIsolationTree7predictERK7MatrixX">
+<span id="_CPPv3NK5genif24GeneralizedIsolationTree7predictERK7MatrixX"></span><span id="_CPPv2NK5genif24GeneralizedIsolationTree7predictERK7MatrixX"></span><span id="genif::GeneralizedIsolationTree::predict__MatrixXCRC"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1ae1f20d1b3e003b7890863d59e2104b60"></span><a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#_CPPv4N5genif22OutlierDetectionResultE" title="genif::OutlierDetectionResult">OutlierDetectionResult</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK5genif24GeneralizedIsolationTree7predictERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Predicts the outlierness for a given dataset using a previously fitted model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>An instance of <a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#structgenif_1_1OutlierDetectionResult"><span class="std std-ref">OutlierDetectionResult</span></a> which contains the probabilities for individual observations to be inliers. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset to inspect for outliers. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif24GeneralizedIsolationTree7predictERK7MatrixXRK8GIFModel">
+<span id="_CPPv3NK5genif24GeneralizedIsolationTree7predictERK7MatrixXRK8GIFModel"></span><span id="_CPPv2NK5genif24GeneralizedIsolationTree7predictERK7MatrixXRK8GIFModel"></span><span id="genif::GeneralizedIsolationTree::predict__MatrixXCR.GIFModelCRC"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1a92c2275946d05ef68b60b40d06ecf82b"></span><a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#_CPPv4N5genif22OutlierDetectionResultE" title="genif::OutlierDetectionResult">OutlierDetectionResult</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em>, <em class="property">const</em> <a class="reference internal" href="structgenif_1_1GIFModel.html#_CPPv4N5genif8GIFModelE" title="genif::GIFModel">GIFModel</a> &amp;<em>model</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK5genif24GeneralizedIsolationTree7predictERK7MatrixXRK8GIFModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Predicts the outlierness for a given dataset using a previously fitted model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>An instance of <a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#structgenif_1_1OutlierDetectionResult"><span class="std std-ref">OutlierDetectionResult</span></a> which contains the probabilities for individual observations to be inliers. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset to inspect for outliers. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The model to use for prediction. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif24GeneralizedIsolationTree4copyEv">
+<span id="_CPPv3NK5genif24GeneralizedIsolationTree4copyEv"></span><span id="_CPPv2NK5genif24GeneralizedIsolationTree4copyEv"></span><span id="genif::GeneralizedIsolationTree::copyC"></span><span class="target" id="classgenif_1_1GeneralizedIsolationTree_1a95d353dc59ac7b21fb20e3f02ce379b9"></span>std::unique_ptr&lt;<a class="reference internal" href="classgenif_1_1Learner.html#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;<a class="reference internal" href="structgenif_1_1GIFModel.html#_CPPv4N5genif8GIFModelE" title="genif::GIFModel">GIFModel</a>, <a class="reference internal" href="structgenif_1_1OutlierDetectionResult.html#_CPPv4N5genif22OutlierDetectionResultE" title="genif::OutlierDetectionResult">OutlierDetectionResult</a>&gt;&gt; <code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK5genif24GeneralizedIsolationTree4copyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Takes a copy of this object. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>An unique_ptr pointing to a copy of this instance. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classgenif_1_1GIFExitCondition.html" class="btn btn-neutral float-right" title="Class GIFExitCondition" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classgenif_1_1GeneralizedIsolationForest.html" class="btn btn-neutral float-left" title="Class GeneralizedIsolationForest" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

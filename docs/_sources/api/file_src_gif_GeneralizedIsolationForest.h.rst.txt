@@ -1,0 +1,67 @@
+
+.. _file_src_gif_GeneralizedIsolationForest.h:
+
+File GeneralizedIsolationForest.h
+=================================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_gif>` (``src/gif``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/gif/GeneralizedIsolationForest.h``)
+-----------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_gif_GeneralizedIsolationForest.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``GeneralizedIsolationTree.h`` (:ref:`file_src_gif_GeneralizedIsolationTree.h`)
+
+- ``src/BaggingEnsemble.h`` (:ref:`file_src_BaggingEnsemble.h`)
+
+- ``src/Learner.h`` (:ref:`file_src_Learner.h`)
+
+- ``src/OutlierDetectionResult.h`` (:ref:`file_src_OutlierDetectionResult.h`)
+
+- ``src/Tools.h`` (:ref:`file_src_Tools.h`)
+
+- ``src/gif/GIFModel.h`` (:ref:`file_src_gif_GIFModel.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_PythonBinding.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_genif`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classgenif_1_1GeneralizedIsolationForest`
+

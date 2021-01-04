@@ -1,0 +1,103 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_gif.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_io.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_kernels.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_BaggingEnsemble.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_io_DataTypeHandling.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_gif_GeneralizedIsolationForest.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_gif_GeneralizedIsolationTree.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_gif_GIFExitCondition.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_gif_GIFModel.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_kernels_Kernel.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_Learner.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_kernels_MaternKernel.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_OutlierDetectionResult.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_PythonBinding.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_kernels_RBFKernel.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_Tools.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_src_gif_Tree.h.rst

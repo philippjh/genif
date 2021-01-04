@@ -1,0 +1,25 @@
+.. _exhale_class_classgenif_1_1BaggingEnsemble:
+
+Template Class BaggingEnsemble
+==============================
+
+- Defined in :ref:`file_src_BaggingEnsemble.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public genif::Learner< std::vector< ModelType >, std::vector< PredictionType > >`` (:ref:`exhale_class_classgenif_1_1Learner`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::BaggingEnsemble
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python API &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="C++ API" href="api/library_root.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Python API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pythonapi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-genif">
+<span id="python-api"></span><h1>Python API<a class="headerlink" href="#module-genif" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="genif.GeneralizedIsolationForest">
+<em class="property">class </em><code class="sig-prename descclassname">genif.</code><code class="sig-name descname">GeneralizedIsolationForest</code><a class="headerlink" href="#genif.GeneralizedIsolationForest" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Members</dt>
+<dd class="field-odd"><p>models</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="genif.GeneralizedIsolationForest.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#genif.GeneralizedIsolationForest" title="genif.GeneralizedIsolationForest">genif.GeneralizedIsolationForest</a></span></em>, <em class="sig-param"><span class="n">k</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">n_models</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">sample_size</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">kernel</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">kernel_scaling</span><span class="p">:</span> <span class="n">numpy.ndarray<span class="p">[</span>numpy.float64<span class="p">[</span>m<span class="p">, </span>1<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">sigma</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">worker_count</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">- 1</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#genif.GeneralizedIsolationForest.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the GeneralizedIsolationForest with the following parameters:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>int</em>) – The number of representatives to find for each node of the tree.</p></li>
+<li><p><strong>n_models</strong> (<em>int</em>) – The number of trees to fit.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – The sample size to consider for every tree to be fit.</p></li>
+<li><p><strong>kernel</strong> (<em>str</em>) – Name of the kernel to use (possible values: <cite>rbf</cite>, <cite>matern-d1</cite>, <cite>matern-d3</cite>, <cite>matern-d5</cite>).</p></li>
+<li><p><strong>kernel_scaling</strong> (<em>ndarray</em>) – Vector of scaling values for the kernel to be used (scalar for RBF, <code class="docutils literal notranslate"><span class="pre">d</span></code>-dimensional vector for Matern kernels).</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Average pairwise kernel values of observations in a data sub-region, which should be exceeded for the exit condition to apply.</p></li>
+<li><p><strong>worker_count</strong> (<em>int</em>) – Number of parallel workers to consider (-1 defaults to all available cores).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genif.GeneralizedIsolationForest.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#genif.GeneralizedIsolationForest" title="genif.GeneralizedIsolationForest">genif.GeneralizedIsolationForest</a></span></em>, <em class="sig-param"><span class="n">X</span><span class="p">:</span> <span class="n">numpy.ndarray<span class="p">[</span>numpy.float64<span class="p">[</span>m<span class="p">, </span>n<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; genif.GIFModel_ODR_Learner<a class="headerlink" href="#genif.GeneralizedIsolationForest.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the forest using the provided input data matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>ndarray</em>) – Input data matrix with shape <code class="docutils literal notranslate"><span class="pre">[n,</span> <span class="pre">d]</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Callee.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genif.GeneralizedIsolationForest.fit_predict">
+<code class="sig-name descname">fit_predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#genif.GeneralizedIsolationForest" title="genif.GeneralizedIsolationForest">genif.GeneralizedIsolationForest</a></span></em>, <em class="sig-param"><span class="n">X</span><span class="p">:</span> <span class="n">numpy.ndarray<span class="p">[</span>numpy.float64<span class="p">[</span>m<span class="p">, </span>n<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<span class="p">[</span>numpy.float64<span class="p">[</span>m<span class="p">, </span>1<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#genif.GeneralizedIsolationForest.fit_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the forest using the given input data matrix and predicts the probability for every input observation to be an inlier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>ndarray</em>) – Input data matrix with shape <code class="docutils literal notranslate"><span class="pre">[n,</span> <span class="pre">d]</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Vector of probabilities, represented as ndarray with shape <code class="docutils literal notranslate"><span class="pre">[n,</span> <span class="pre">1]</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="genif.GeneralizedIsolationForest.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#genif.GeneralizedIsolationForest" title="genif.GeneralizedIsolationForest">genif.GeneralizedIsolationForest</a></span></em>, <em class="sig-param"><span class="n">X</span><span class="p">:</span> <span class="n">numpy.ndarray<span class="p">[</span>numpy.float64<span class="p">[</span>m<span class="p">, </span>n<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<span class="p">[</span>numpy.float64<span class="p">[</span>m<span class="p">, </span>1<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#genif.GeneralizedIsolationForest.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predicts the probability for inlierness for every entry of the data matrix. Prior to calling <code class="docutils literal notranslate"><span class="pre">predict</span></code> either <code class="docutils literal notranslate"><span class="pre">fit</span></code> or <code class="docutils literal notranslate"><span class="pre">fit_predict</span></code> has to be called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>ndarray</em>) – Input data matrix with shape <code class="docutils literal notranslate"><span class="pre">[n,</span> <span class="pre">d]</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Vector of probabilities, represented as ndarray with shape <code class="docutils literal notranslate"><span class="pre">[n,</span> <span class="pre">1]</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api/library_root.html" class="btn btn-neutral float-right" title="C++ API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

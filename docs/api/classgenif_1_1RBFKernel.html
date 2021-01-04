@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class RBFKernel &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class Tools" href="classgenif_1_1Tools.html" />
+    <link rel="prev" title="Class MaternKernel" href="classgenif_1_1MaternKernel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">C++ API</a> &raquo;</li>
+        
+      <li>Class RBFKernel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classgenif_1_1RBFKernel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-rbfkernel">
+<span id="exhale-class-classgenif-1-1rbfkernel"></span><h1>Class RBFKernel<a class="headerlink" href="#class-rbfkernel" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_kernels_RBFKernel.h.html#file-src-kernels-rbfkernel-h"><span class="std std-ref">File RBFKernel.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">genif::Kernel</span></code> (<a class="reference internal" href="classgenif_1_1Kernel.html#exhale-class-classgenif-1-1kernel"><span class="std std-ref">Class Kernel</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv4N5genif9RBFKernelE">
+<span id="_CPPv3N5genif9RBFKernelE"></span><span id="_CPPv2N5genif9RBFKernelE"></span><span id="genif::RBFKernel"></span><span class="target" id="classgenif_1_1RBFKernel"></span><em class="property">class </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">RBFKernel</code> : <em class="property">public</em> genif::<a class="reference internal" href="classgenif_1_1Kernel.html#_CPPv4N5genif6KernelE" title="genif::Kernel">Kernel</a><a class="headerlink" href="#_CPPv4N5genif9RBFKernelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5genif9RBFKernel9RBFKernelEv">
+<span id="_CPPv3N5genif9RBFKernel9RBFKernelEv"></span><span id="_CPPv2N5genif9RBFKernel9RBFKernelEv"></span><span id="genif::RBFKernel::RBFKernel"></span><span class="target" id="classgenif_1_1RBFKernel_1ad1c9df00a1776cc4018b9a8a60863b8b"></span><code class="sig-name descname">RBFKernel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<a class="headerlink" href="#_CPPv4N5genif9RBFKernel9RBFKernelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The default constructor for this kernel. The sigma value is 1.0. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif9RBFKernel9RBFKernelE6data_t">
+<span id="_CPPv3N5genif9RBFKernel9RBFKernelE6data_t"></span><span id="_CPPv2N5genif9RBFKernel9RBFKernelE6data_t"></span><span id="genif::RBFKernel::RBFKernel__data_t"></span><span class="target" id="classgenif_1_1RBFKernel_1a21f0fb99d3862039a60a1ec69837f4e1"></span><code class="sig-name descname">RBFKernel</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a> <em>sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif9RBFKernel9RBFKernelE6data_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instantiates a RBF <a class="reference internal" href="classgenif_1_1Kernel.html#classgenif_1_1Kernel"><span class="std std-ref">Kernel</span></a> object with given sigma. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sigma</span></code>: <a class="reference internal" href="classgenif_1_1Kernel.html#classgenif_1_1Kernel"><span class="std std-ref">Kernel</span></a> sigma value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif9RBFKernel9RBFKernelE6data_t6data_t">
+<span id="_CPPv3N5genif9RBFKernel9RBFKernelE6data_t6data_t"></span><span id="_CPPv2N5genif9RBFKernel9RBFKernelE6data_t6data_t"></span><span id="genif::RBFKernel::RBFKernel__data_t.data_t"></span><span class="target" id="classgenif_1_1RBFKernel_1a6534356b263e7baa7ac3f704e43392f3"></span><code class="sig-name descname">RBFKernel</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a> <em>sigma</em>, <a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a> <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif9RBFKernel9RBFKernelE6data_t6data_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instantiates a RBF <a class="reference internal" href="classgenif_1_1Kernel.html#classgenif_1_1Kernel"><span class="std std-ref">Kernel</span></a> object with given sigma. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sigma</span></code>: <a class="reference internal" href="classgenif_1_1Kernel.html#classgenif_1_1Kernel"><span class="std std-ref">Kernel</span></a> sigma value. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">l</span></code>: A scaling value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif9RBFKernelclERK7VectorXRK7VectorX">
+<span id="_CPPv3NK5genif9RBFKernelclERK7VectorXRK7VectorX"></span><span id="_CPPv2NK5genif9RBFKernelclERK7VectorXRK7VectorX"></span><span id="genif::RBFKernel::call-operator__VectorXCR.VectorXCRC"></span><span class="target" id="classgenif_1_1RBFKernel_1a7164db39a36d88e1432403ffe859857b"></span><a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a> <code class="sig-name descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1ac7f373529e883cf687f5ef3313ea1f45.html#_CPPv4N5genif7VectorXE" title="genif::VectorX">VectorX</a> &amp;<em>x1</em>, <em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1ac7f373529e883cf687f5ef3313ea1f45.html#_CPPv4N5genif7VectorXE" title="genif::VectorX">VectorX</a> &amp;<em>x2</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK5genif9RBFKernelclERK7VectorXRK7VectorX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the RBF kernel value for two vectors x1 and x2 by using the following formula.</p>
+<p><span class="math notranslate nohighlight">\(k(x_1, x_2) = _l^2 \exp(- \frac{\|x_1 - x_2 \|_2^2}{2\sigma^2})\)</span></p>
+<p>The norm in the equation may be substituted by a different function by constructing this object with another distance function. However, the implementation defaults to the squared L2-norm, which effectively resembles the squared euclidean distance between the input vectors.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>RBF kernel value for x1 and x2. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x1</span></code>: A vector. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x2</span></code>: A vector. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif9RBFKernel8getSigmaEv">
+<span id="_CPPv3NK5genif9RBFKernel8getSigmaEv"></span><span id="_CPPv2NK5genif9RBFKernel8getSigmaEv"></span><span id="genif::RBFKernel::getSigmaC"></span><span class="target" id="classgenif_1_1RBFKernel_1a618fd20032aba71cfa0b48ea6a77f112"></span><a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a> <code class="sig-name descname">getSigma</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif9RBFKernel8getSigmaEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the sigma value, that is currently stored in this kernel. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>As stated above. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif9RBFKernel4getLEv">
+<span id="_CPPv3NK5genif9RBFKernel4getLEv"></span><span id="_CPPv2NK5genif9RBFKernel4getLEv"></span><span id="genif::RBFKernel::getLC"></span><span class="target" id="classgenif_1_1RBFKernel_1a629f9d8d88f9bceaba0e17c11b1bff9f"></span><a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a> <code class="sig-name descname">getL</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif9RBFKernel4getLEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the L scaler value, that is currently stored in this kernel. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>As stated above. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classgenif_1_1Tools.html" class="btn btn-neutral float-right" title="Class Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classgenif_1_1MaternKernel.html" class="btn btn-neutral float-left" title="Class MaternKernel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

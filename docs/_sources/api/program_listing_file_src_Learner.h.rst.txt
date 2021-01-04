@@ -1,0 +1,50 @@
+
+.. _program_listing_file_src_Learner.h:
+
+Program Listing for File Learner.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_Learner.h>` (``src/Learner.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef GENIF_LEARNER_H
+   #define GENIF_LEARNER_H
+   
+   #include <src/io/DataTypeHandling.h>
+   
+   namespace genif {
+       template<typename ModelType, typename PredictionType>
+       class Learner {
+       public:
+           virtual Learner<ModelType, PredictionType>& fit(const MatrixX& dataset) {
+               throw std::runtime_error("Learner::fit: Not implemented.");
+           };
+   
+           virtual PredictionType fitPredict(const MatrixX& dataset) {
+               return fit(dataset).predict(dataset);
+           };
+   
+           virtual PredictionType predict(const MatrixX& dataset) const {
+               throw std::runtime_error("Learner::predict: Not implemented.");
+           };
+   
+           virtual PredictionType predict(const MatrixX& dataset, const ModelType& model) const {
+               throw std::runtime_error("Learner::predict: Not implemented.");
+           };
+   
+           virtual ModelType getModel() const {
+               throw std::runtime_error("Learner::getModel: Not implemented.");
+           };
+   
+           virtual std::unique_ptr<Learner<ModelType, PredictionType>> copy() const {
+               throw std::runtime_error("Learner::copy: Not implemented.");
+           }
+   
+           virtual ~Learner() = default;
+       };
+   }
+   
+   #endif // GENIF_LEARNER_H

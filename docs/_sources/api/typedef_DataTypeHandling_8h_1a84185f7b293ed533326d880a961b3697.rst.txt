@@ -1,0 +1,13 @@
+.. _exhale_typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697:
+
+Typedef genif::data_t
+=====================
+
+- Defined in :ref:`file_src_io_DataTypeHandling.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: genif::data_t

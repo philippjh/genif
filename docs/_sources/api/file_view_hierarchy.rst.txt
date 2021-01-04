@@ -1,0 +1,18 @@
+
+File Hierarchy
+--------------
+
+
+.. raw:: html
+
+   <ul class="treeView" id="file-treeView">
+     <li>
+       <ul class="collapsibleList">
+         <li class="lastChild">Directory <a href="dir_src.html#dir-src">src</a><ul><li>Directory <a href="dir_src_gif.html#dir-src-gif">gif</a><ul><li>File <a href="file_src_gif_GeneralizedIsolationForest.h.html#file-src-gif-GeneralizedIsolationForest.h">GeneralizedIsolationForest.h</a></li><li>File <a href="file_src_gif_GeneralizedIsolationTree.h.html#file-src-gif-GeneralizedIsolationTree.h">GeneralizedIsolationTree.h</a></li><li>File <a href="file_src_gif_GIFExitCondition.h.html#file-src-gif-GIFExitCondition.h">GIFExitCondition.h</a></li><li>File <a href="file_src_gif_GIFModel.h.html#file-src-gif-GIFModel.h">GIFModel.h</a></li><li class="lastChild">File <a href="file_src_gif_Tree.h.html#file-src-gif-Tree.h">Tree.h</a></li></ul></li><li>Directory <a href="dir_src_io.html#dir-src-io">io</a><ul><li class="lastChild">File <a href="file_src_io_DataTypeHandling.h.html#file-src-io-DataTypeHandling.h">DataTypeHandling.h</a></li></ul></li><li>Directory <a href="dir_src_kernels.html#dir-src-kernels">kernels</a><ul><li>File <a href="file_src_kernels_Kernel.h.html#file-src-kernels-Kernel.h">Kernel.h</a></li><li>File <a href="file_src_kernels_MaternKernel.h.html#file-src-kernels-MaternKernel.h">MaternKernel.h</a></li><li class="lastChild">File <a href="file_src_kernels_RBFKernel.h.html#file-src-kernels-RBFKernel.h">RBFKernel.h</a></li></ul></li><li>File <a href="file_src_BaggingEnsemble.h.html#file-src-BaggingEnsemble.h">BaggingEnsemble.h</a></li><li>File <a href="file_src_Learner.h.html#file-src-Learner.h">Learner.h</a></li><li>File <a href="file_src_OutlierDetectionResult.h.html#file-src-OutlierDetectionResult.h">OutlierDetectionResult.h</a></li><li>File <a href="file_src_PythonBinding.cpp.html#file-src-PythonBinding.cpp">PythonBinding.cpp</a></li><li class="lastChild">File <a href="file_src_Tools.h.html#file-src-Tools.h">Tools.h</a></li></ul></li>
+       </ul>
+     </li><!-- only tree view element -->
+   </ul><!-- /treeView file-treeView -->
+
+.. end raw html for treeView
+
+

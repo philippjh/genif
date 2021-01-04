@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Template Class BaggingEnsemble &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class GeneralizedIsolationForest" href="classgenif_1_1GeneralizedIsolationForest.html" />
+    <link rel="prev" title="Struct Tree" href="structgenif_1_1Tree.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">C++ API</a> &raquo;</li>
+        
+      <li>Template Class BaggingEnsemble</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classgenif_1_1BaggingEnsemble.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="template-class-baggingensemble">
+<span id="exhale-class-classgenif-1-1baggingensemble"></span><h1>Template Class BaggingEnsemble<a class="headerlink" href="#template-class-baggingensemble" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_BaggingEnsemble.h.html#file-src-baggingensemble-h"><span class="std std-ref">File BaggingEnsemble.h</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">genif::Learner&lt;</span> <span class="pre">std::vector&lt;</span> <span class="pre">ModelType</span> <span class="pre">&gt;,</span> <span class="pre">std::vector&lt;</span> <span class="pre">PredictionType</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classgenif_1_1Learner.html#exhale-class-classgenif-1-1learner"><span class="std std-ref">Template Class Learner</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv4I00EN5genif15BaggingEnsembleE">
+<span id="_CPPv3I00EN5genif15BaggingEnsembleE"></span><span id="_CPPv2I00EN5genif15BaggingEnsembleE"></span>template&lt;typename <code class="sig-name descname">ModelType</code>, typename <code class="sig-name descname">PredictionType</code>&gt;<br /><span class="target" id="classgenif_1_1BaggingEnsemble"></span><em class="property">class </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">BaggingEnsemble</code> : <em class="property">public</em> genif::<a class="reference internal" href="classgenif_1_1Learner.html#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;std::vector&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::ModelType">ModelType</a>&gt;, std::vector&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::PredictionType">PredictionType</a>&gt;&gt;<a class="headerlink" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides a generic Bagging ensemble, that randomly subsamples given datasets and outputs a vector of learned models and predictions.</p>
+<p><dl class="simple">
+<dt><strong>Template Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ModelType</span></code>: The type of model, that the learner yields as result from calling <code class="docutils literal notranslate"><span class="pre">fit</span></code>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PredictionType</span></code>: The type of prediction, that the learner yields as result from calling either <code class="docutils literal notranslate"><span class="pre">fitPredict</span></code> and <code class="docutils literal notranslate"><span class="pre">predict</span></code>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5genif15BaggingEnsemble15BaggingEnsembleERK7LearnerI9ModelType14PredictionTypeEjjj">
+<span id="_CPPv3N5genif15BaggingEnsemble15BaggingEnsembleERK7LearnerI9ModelType14PredictionTypeEjjj"></span><span id="_CPPv2N5genif15BaggingEnsemble15BaggingEnsembleERK7LearnerI9ModelType14PredictionTypeEjjj"></span><span id="genif::BaggingEnsemble::BaggingEnsemble__Learner:ModelType.PredictionType:CR.unsigned-i.unsigned-i.unsigned-i"></span><span class="target" id="classgenif_1_1BaggingEnsemble_1ac25fb68e0d83fc042da508606146413c"></span><code class="sig-name descname">BaggingEnsemble</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="classgenif_1_1Learner.html#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::ModelType">ModelType</a>, <a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::PredictionType">PredictionType</a>&gt; &amp;<em>baseLearner</em>, unsigned int <em>nModels</em> = 100, unsigned int <em>sampleSize</em> = 256, unsigned int <em>workerCount</em> = 1<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif15BaggingEnsemble15BaggingEnsembleERK7LearnerI9ModelType14PredictionTypeEjjj" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructs a new instance of <a class="reference internal" href="#classgenif_1_1BaggingEnsemble"><span class="std std-ref">BaggingEnsemble</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">baseLearner</span></code>: The base learner, which serves as a prototype for subsequent learning efforts. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nModels</span></code>: The number of models to fit. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleSize</span></code>: The number of observations to draw to fit each model. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workerCount</span></code>: The number of workers, which should fit models in parallel. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif15BaggingEnsemble3fitERK7MatrixX">
+<span id="_CPPv3N5genif15BaggingEnsemble3fitERK7MatrixX"></span><span id="_CPPv2N5genif15BaggingEnsemble3fitERK7MatrixX"></span><span id="genif::BaggingEnsemble::fit__MatrixXCR"></span><span class="target" id="classgenif_1_1BaggingEnsemble_1a6c912a836f14a8093595af8e9ff07313"></span><a class="reference internal" href="classgenif_1_1Learner.html#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;std::vector&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::ModelType">ModelType</a>&gt;, std::vector&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::PredictionType">PredictionType</a>&gt;&gt; &amp;<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N5genif15BaggingEnsemble3fitERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fit <code class="docutils literal notranslate"><span class="pre">nModels</span></code> using the supplied dataset.</p>
+<p>For fitting, this method takes a copy of the baseLearner property and calls fit using a previously drawn sample of dataset.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A reference to the current <a class="reference internal" href="#classgenif_1_1BaggingEnsemble"><span class="std std-ref">BaggingEnsemble</span></a> instance. The fitted models may be retrieved by calling the <code class="docutils literal notranslate"><span class="pre">getModels()</span></code> function. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset used to fit models. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif15BaggingEnsemble7predictERK7MatrixX">
+<span id="_CPPv3NK5genif15BaggingEnsemble7predictERK7MatrixX"></span><span id="_CPPv2NK5genif15BaggingEnsemble7predictERK7MatrixX"></span><span id="genif::BaggingEnsemble::predict__MatrixXCRC"></span><span class="target" id="classgenif_1_1BaggingEnsemble_1a762eb29d71bb61c0bf5a030373c7b61a"></span>std::vector&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::PredictionType">PredictionType</a>&gt; <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK5genif15BaggingEnsemble7predictERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Make predictions by using the set of models, which were previously learned with the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Internally, this method calls the predict method of the given base learner and calls predict with every learned model and the supplied dataset.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A vector of predictions. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset to use for prediction. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif15BaggingEnsemble8getModelEv">
+<span id="_CPPv3NK5genif15BaggingEnsemble8getModelEv"></span><span id="_CPPv2NK5genif15BaggingEnsemble8getModelEv"></span><span id="genif::BaggingEnsemble::getModelC"></span><span class="target" id="classgenif_1_1BaggingEnsemble_1ac3e831b8d91fb28faa20b56ff04206e8"></span>std::vector&lt;<a class="reference internal" href="#_CPPv4I00EN5genif15BaggingEnsembleE" title="genif::BaggingEnsemble::ModelType">ModelType</a>&gt; <code class="sig-name descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif15BaggingEnsemble8getModelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gathers the list of learned models, which were previously learned with the fit method. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of models. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif15BaggingEnsemble17getNumberOfModelsEv">
+<span id="_CPPv3NK5genif15BaggingEnsemble17getNumberOfModelsEv"></span><span id="_CPPv2NK5genif15BaggingEnsemble17getNumberOfModelsEv"></span><span id="genif::BaggingEnsemble::getNumberOfModelsC"></span><span class="target" id="classgenif_1_1BaggingEnsemble_1af316954a85ee822b1255f5f14800a5ef"></span>unsigned int <code class="sig-name descname">getNumberOfModels</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif15BaggingEnsemble17getNumberOfModelsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the number of models, which should be fitted in this ensemble. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>As stated above. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif15BaggingEnsemble23getActualNumberOfModelsEv">
+<span id="_CPPv3NK5genif15BaggingEnsemble23getActualNumberOfModelsEv"></span><span id="_CPPv2NK5genif15BaggingEnsemble23getActualNumberOfModelsEv"></span><span id="genif::BaggingEnsemble::getActualNumberOfModelsC"></span><span class="target" id="classgenif_1_1BaggingEnsemble_1aa6370c7b6bb757e55b10669b638ec16b"></span>unsigned int <code class="sig-name descname">getActualNumberOfModels</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif15BaggingEnsemble23getActualNumberOfModelsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the number of models, which have been fitted in this ensemble. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>As stated above. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classgenif_1_1GeneralizedIsolationForest.html" class="btn btn-neutral float-right" title="Class GeneralizedIsolationForest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structgenif_1_1Tree.html" class="btn btn-neutral float-left" title="Struct Tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

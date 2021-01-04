@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python API" href="pythonapi.html" />
+    <link rel="prev" title="Generalized Isolation Forest" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">C++</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-library-within-other-projects">Using the library within other projects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>Once you have installed (for Python users) or downloaded (for C++ users) the package, the module can be used in two different ways, either by importing <code class="docutils literal notranslate"><span class="pre">genif</span></code> into Python or by
+including the respective sources into your C++ project.</p>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>The main functionality of this package is implemented in the <a class="reference internal" href="pythonapi.html#genif.GeneralizedIsolationForest" title="genif.GeneralizedIsolationForest"><code class="xref py py-class docutils literal notranslate"><span class="pre">genif.GeneralizedIsolationForest</span></code></a> class. For convenience, this class follows the well-established principle
+of librarys like <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, which requires classifiers to provide a <code class="docutils literal notranslate"><span class="pre">fit</span></code>, <code class="docutils literal notranslate"><span class="pre">fit_predict</span></code> and <code class="docutils literal notranslate"><span class="pre">predict</span></code> method. A very basic example using this library can hence be
+given as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">genif</span> <span class="kn">import</span> <span class="n">GeneralizedIsolationForest</span>
+
+<span class="c1"># Create some random demo data.</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+
+<span class="c1"># Create the GIF classifier.</span>
+<span class="n">gif</span> <span class="o">=</span> <span class="n">GeneralizedIsolationForest</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_models</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">sample_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                                 <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">kernel_scaling</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="c1"># Fit the classifier and make predictions.</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gif</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For this example, we chose to divide every data region into <code class="docutils literal notranslate"><span class="pre">k=10</span></code>. The algorithm will fit a total of 50 trees, each considering a sample of the provided dataset containing 256
+observations. To decide, when tree induction is terminated, the algorithm relies on a RBF kernel which is scales to 0.05. Tree induction is terminated, when the pairwise average
+kernel value of observations in a particular exceeds 0.01.</p>
+<p>The GIF algorithm internally fits a forest of Generalized Isolation Trees and estimates inlier probabilities for each found data region. After the procedure finished, the returned
+values is assigned to <code class="docutils literal notranslate"><span class="pre">y_pred</span></code>, which contains a vector of <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">1000</span></code> entries each describing the probability for every input data vector to be inlying or not. High probability
+values, which are near one, therefore indicate conforming (i.e. “normal”) behaviour. Conversely, probability values near zero indicate non-conforming (i.e. “anomalous”) behaviour.</p>
+<p>It is also possible to fit the GIF on one dataset, while using another dataset for the actual predictions you want to make. In this case, you will need to call <code class="docutils literal notranslate"><span class="pre">fit</span></code> and
+<code class="docutils literal notranslate"><span class="pre">predict</span></code> independently:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">genif</span> <span class="kn">import</span> <span class="n">GeneralizedIsolationForest</span>
+
+<span class="c1"># Create some random demo data (1).</span>
+<span class="n">X_training</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+<span class="n">X_testing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+
+<span class="c1"># Create the GIF classifier.</span>
+<span class="n">gif</span> <span class="o">=</span> <span class="n">GeneralizedIsolationForest</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_models</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">sample_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                                 <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">kernel_scaling</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="c1"># Fit the classifier and make predictions.</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gif</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_training</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_testing</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You may also want to choose another kernel to check for tree induction termination. Besides the RBF kernel, the class of Matèrn kernels is supported with
+<span class="math notranslate nohighlight">\(\nu \in \left\lbrace 1/2, 3/2, 5/2 \right\rbrace\)</span>, which can be selected in code by replacing <code class="docutils literal notranslate"><span class="pre">rbf</span></code> with <code class="docutils literal notranslate"><span class="pre">matern-d1</span></code>, <code class="docutils literal notranslate"><span class="pre">matern-d3</span></code>, <code class="docutils literal notranslate"><span class="pre">matern-d5</span></code> respectively. Please
+keep in mind, that the Matèrn kernels expect the scaling vector to contain as many entries as the input vectors have dimensions. Thus, GIF may be called like that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">genif</span> <span class="kn">import</span> <span class="n">GeneralizedIsolationForest</span>
+
+<span class="c1"># Create some random demo data.</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+
+<span class="c1"># Create the GIF classifier.</span>
+<span class="n">gif</span> <span class="o">=</span> <span class="n">GeneralizedIsolationForest</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_models</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">sample_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                                 <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">kernel_scaling</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">d</span><span class="p">),</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="c1"># Fit the classifier and make predictions.</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gif</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Remember that GIF returns probability values, which you want to be binarized. In this case you will need to find an appropriate probability threshold, which you can apply to the
+prediction vector for binarization.</p>
+</div>
+<div class="section" id="c">
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<p>Using the C++ interface might be interesting for those users, which want to embed this algorithm either in their existing programs or which want to add more functionality to the
+existing sources (what we highly appreciate! Merge requests are always welcome.). For the C++ part of this section, we will discuss the general project
+setup routine rather than the parametrization options for GIF. If you’re interested in those, please take a look into the <cite>Python</cite> subsection above as the necessary parameters are
+quite the same.</p>
+<div class="section" id="using-the-library-within-other-projects">
+<h3>Using the library within other projects<a class="headerlink" href="#using-the-library-within-other-projects" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">genif</span></code> sources are distributed as a “header-only” library within the CMake project model. Hence, no explicit compilation or linking is needed. For this section, we will
+assume, that your project is also organized as a CMake project.</p>
+<p>To include GIF in your package follow these steps:</p>
+<ol class="arabic simple">
+<li><p><cite>Optional:</cite> Create a separate subdirectory holding library folders (e.g. <code class="docutils literal notranslate"><span class="pre">lib</span></code>).</p></li>
+<li><p><strong>Recursively</strong> clone GIF source code repository by issueing either <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">--recurse-submodules</span> <span class="pre">git&#64;github.com:philippjh/genif.git</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">add</span> <span class="pre">--recurse-submodules</span> <span class="pre">git&#64;github.com:philippjh/genif.git</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span> <span class="pre">--recursive</span></code> (for submodule enthusiasts).</p></li>
+<li><p>Add the subdirectory to your <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file (i.e. <code class="docutils literal notranslate"><span class="pre">add_subdirectory(lib/genif)</span></code>).</p></li>
+<li><p>Link “your” target to the “virtual” target <code class="docutils literal notranslate"><span class="pre">libgenif</span></code>, which makes all necessary header files available to your project. This can be accomplished by <code class="docutils literal notranslate"><span class="pre">target_link_libraries(yourtarget</span> <span class="pre">PUBLIC</span> <span class="pre">libgenif)</span></code>.</p></li>
+</ol>
+<p>You are ready to use the GIF library within your C++ project. All GIF-related symbols are packed into the <code class="docutils literal notranslate"><span class="pre">genif</span></code> namespace, hence do not forget to either prepend <code class="docutils literal notranslate"><span class="pre">genif::</span></code> or
+use an <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span></code> directive.</p>
+<p>A short demonstrational listing may be given as follows:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;src/gif/GeneralizedIsolationForest.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Create some parameters.</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nModels</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">sampleSize</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">kernelId</span> <span class="o">=</span> <span class="s">&quot;rbf&quot;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">kernelScaling</span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">::</span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">const</span> <span class="kt">double</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">workerCount</span> <span class="o">=</span> <span class="mi">-1</span><span class="p">;</span>
+
+    <span class="c1">// Create some random data to classify.</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">X</span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Random</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+
+    <span class="n">genif</span><span class="o">::</span><span class="n">GeneralizedIsolationForest</span> <span class="n">gif</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">nModels</span><span class="p">,</span> <span class="n">sampleSize</span><span class="p">,</span> <span class="n">kernelId</span><span class="p">,</span> <span class="n">kernelScaling</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">workerCount</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">yPred</span> <span class="o">=</span> <span class="n">gif</span><span class="p">.</span><span class="n">fitPredict</span><span class="p">(</span><span class="n">X</span><span class="p">);</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Prediction:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">yPred</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As you can see, GIF uses the Eigen library for matrix-vector operations, which is included automatically, when you add the library to your <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pythonapi.html" class="btn btn-neutral float-right" title="Python API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Generalized Isolation Forest" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

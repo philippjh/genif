@@ -1,0 +1,16 @@
+.. _exhale_class_classgenif_1_1Tools:
+
+Class Tools
+===========
+
+- Defined in :ref:`file_src_Tools.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::Tools
+   :members:
+   :protected-members:
+   :undoc-members:

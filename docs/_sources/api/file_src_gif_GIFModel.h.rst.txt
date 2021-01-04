@@ -1,0 +1,59 @@
+
+.. _file_src_gif_GIFModel.h:
+
+File GIFModel.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_src_gif>` (``src/gif``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/gif/GIFModel.h``)
+-----------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_gif_GIFModel.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``nanoflann.hpp``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_gif_GeneralizedIsolationForest.h`
+
+- :ref:`file_src_gif_GeneralizedIsolationTree.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_genif`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structgenif_1_1GIFModel`
+

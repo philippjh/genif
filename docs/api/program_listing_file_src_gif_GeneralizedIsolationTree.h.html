@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File GeneralizedIsolationTree.h &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File GeneralizedIsolationTree.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_gif_GeneralizedIsolationTree.h.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-generalizedisolationtree-h">
+<span id="program-listing-file-src-gif-generalizedisolationtree-h"></span><h1>Program Listing for File GeneralizedIsolationTree.h<a class="headerlink" href="#program-listing-for-file-generalizedisolationtree-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#file-src-gif-generalizedisolationtree-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/gif/GeneralizedIsolationTree.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef GENIF_GENERALIZEDISOLATIONTREE_H</span>
+<span class="cp">#define GENIF_GENERALIZEDISOLATIONTREE_H</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;GIFExitCondition.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;GIFModel.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Tree.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;nanoflann.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;random&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;src/Learner.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;src/OutlierDetectionResult.h&gt;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">genif</span> <span class="p">{</span>
+    <span class="k">class</span> <span class="nc">GeneralizedIsolationTree</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Learner</span><span class="o">&lt;</span><span class="n">GIFModel</span><span class="p">,</span> <span class="n">OutlierDetectionResult</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">GeneralizedIsolationTree</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="k">const</span> <span class="n">GIFExitCondition</span><span class="o">&amp;</span> <span class="n">exitCondition</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">workerCount</span><span class="p">)</span> <span class="o">:</span>
+            <span class="n">_k</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">_workerCount</span><span class="p">(</span><span class="n">workerCount</span><span class="p">),</span> <span class="n">_exitCondition</span><span class="p">(</span><span class="n">exitCondition</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">_k</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;GeneralizedIsolationTree::GeneralizedIsolationTree: k needs to be at least two.&quot;</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">_workerCount</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;GeneralizedIsolationTree::GeneralizedIsolationTree: workerCount needs to be at least one.&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">Learner</span><span class="o">&lt;</span><span class="n">GIFModel</span><span class="p">,</span> <span class="n">OutlierDetectionResult</span><span class="o">&gt;&amp;</span> <span class="n">fit</span><span class="p">(</span><span class="k">const</span> <span class="n">MatrixX</span><span class="o">&amp;</span> <span class="n">dataset</span><span class="p">)</span> <span class="k">override</span> <span class="p">{</span>
+            <span class="c1">// Check, whether we have enough observations.</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">_k</span><span class="p">)</span>
+                <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;GeneralizedIsolationTree::fit: The dataset should have at least k = &quot;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">_k</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; observations but has &quot;</span>
+                                         <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot; observations.&quot;</span><span class="p">);</span>
+
+            <span class="c1">// Assign the tree to this object.</span>
+            <span class="n">Tree</span><span class="o">*</span> <span class="n">treeRoot</span> <span class="o">=</span> <span class="n">findTree</span><span class="p">(</span><span class="n">dataset</span><span class="p">);</span>
+
+            <span class="c1">// Find leafs.</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">leafVectorIndices</span><span class="p">;</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="k">const</span> <span class="n">Tree</span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">findRepresentatives</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="n">findRepresentatives</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">leafVectorIndices</span><span class="p">](</span><span class="k">const</span> <span class="n">Tree</span><span class="o">&amp;</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">node</span><span class="p">.</span><span class="n">nodes</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">childNode</span> <span class="p">:</span> <span class="n">node</span><span class="p">.</span><span class="n">nodes</span><span class="p">)</span>
+                        <span class="n">findRepresentatives</span><span class="p">(</span><span class="o">*</span><span class="n">childNode</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span>
+                    <span class="n">leafVectorIndices</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">representativeIndex</span><span class="p">);</span>
+            <span class="p">};</span>
+            <span class="n">findRepresentatives</span><span class="p">(</span><span class="o">*</span><span class="n">treeRoot</span><span class="p">);</span>
+
+            <span class="c1">// Delete the tree since we do not need it anymore.</span>
+            <span class="k">delete</span> <span class="n">treeRoot</span><span class="p">;</span>
+
+            <span class="c1">// Create a SubmodularOutlierModel instance.</span>
+            <span class="n">GIFModel</span> <span class="n">resultModel</span><span class="p">;</span>
+
+            <span class="c1">// Build matrix from leaf nodes.</span>
+            <span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MatrixX</span><span class="o">&gt;</span><span class="p">(</span><span class="n">leafVectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">dataset</span><span class="p">.</span><span class="n">cols</span><span class="p">());</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">leafVectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="o">-&gt;</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">leafVectorIndices</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+
+            <span class="c1">// Build KDTree on summary.</span>
+            <span class="k">auto</span> <span class="n">kdTree</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">nanoflann</span><span class="o">::</span><span class="n">KDTreeEigenMatrixAdaptor</span><span class="o">&lt;</span><span class="n">MatrixX</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="o">-&gt;</span><span class="n">cols</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">cref</span><span class="p">(</span><span class="o">*</span><span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="p">),</span> <span class="mi">10</span><span class="p">);</span>
+            <span class="n">kdTree</span><span class="o">-&gt;</span><span class="n">index</span><span class="o">-&gt;</span><span class="n">buildIndex</span><span class="p">();</span>
+
+            <span class="c1">// Iterate through the dataset and determine for each vector the nearest vectors in the summary.</span>
+            <span class="n">resultModel</span><span class="p">.</span><span class="n">countsPerRegion</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="o">-&gt;</span><span class="n">rows</span><span class="p">(),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="cp">#pragma omp parallel for num_threads(_workerCount)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// Make KNN query for nearest summary vector.</span>
+                <span class="kt">size_t</span> <span class="n">nearestSummaryIndex</span><span class="p">;</span>
+                <span class="n">data_t</span> <span class="n">sqDistance</span><span class="p">;</span>
+                <span class="n">nanoflann</span><span class="o">::</span><span class="n">KNNResultSet</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span> <span class="n">resultSet</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                <span class="n">resultSet</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">nearestSummaryIndex</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sqDistance</span><span class="p">);</span>
+
+                <span class="n">VectorX</span> <span class="n">datasetVector</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+                <span class="n">kdTree</span><span class="o">-&gt;</span><span class="n">index</span><span class="o">-&gt;</span><span class="n">findNeighbors</span><span class="p">(</span><span class="n">resultSet</span><span class="p">,</span> <span class="n">datasetVector</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span> <span class="n">nanoflann</span><span class="o">::</span><span class="n">SearchParams</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+
+                <span class="c1">// Increase count for nearest summary point.</span>
+<span class="cp">#pragma omp critical</span>
+                <span class="n">resultModel</span><span class="p">.</span><span class="n">countsPerRegion</span><span class="p">[</span><span class="n">nearestSummaryIndex</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// Calculate estimated probabilities for every region.</span>
+            <span class="n">resultModel</span><span class="p">.</span><span class="n">probabilitiesPerRegion</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="o">-&gt;</span><span class="n">rows</span><span class="p">(),</span> <span class="mf">0.0</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="o">-&gt;</span><span class="n">rows</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="n">resultModel</span><span class="p">.</span><span class="n">probabilitiesPerRegion</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">resultModel</span><span class="p">.</span><span class="n">countsPerRegion</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dataset</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+            <span class="c1">// Asssign properties.</span>
+            <span class="n">resultModel</span><span class="p">.</span><span class="n">dataKDTree</span> <span class="o">=</span> <span class="n">kdTree</span><span class="p">;</span>
+            <span class="n">_model</span> <span class="o">=</span> <span class="n">resultModel</span><span class="p">;</span>
+
+            <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">Tree</span><span class="o">*</span> <span class="n">findTree</span><span class="p">(</span><span class="k">const</span> <span class="n">MatrixX</span><span class="o">&amp;</span> <span class="n">dataset</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Initialize a tree.</span>
+            <span class="n">Tree</span><span class="o">*</span> <span class="n">treeRoot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tree</span><span class="p">(</span><span class="n">dataset</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="n">treeRoot</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+
+            <span class="c1">// Choose a (somewhat) random representative.</span>
+            <span class="n">treeRoot</span><span class="o">-&gt;</span><span class="n">representativeIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// Create a worker data structure.</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="n">Tree</span><span class="o">*&gt;&gt;</span> <span class="n">treeTasks</span><span class="p">;</span>
+            <span class="n">treeTasks</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">treeRoot</span><span class="p">);</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">treeTasks</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+                <span class="c1">// Choose a root node to work on.</span>
+                <span class="k">auto</span> <span class="n">task</span> <span class="o">=</span> <span class="n">treeTasks</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+                <span class="n">treeTasks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+
+                <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">treeHeight</span> <span class="o">=</span> <span class="n">task</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+                <span class="n">Tree</span><span class="o">*</span> <span class="n">root</span> <span class="o">=</span> <span class="n">task</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+
+                <span class="c1">// Check, whether the exit condition already applies.</span>
+                <span class="kt">bool</span> <span class="n">shouldExit</span> <span class="o">=</span> <span class="n">_exitCondition</span><span class="p">.</span><span class="n">shouldExitRecursion</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">shouldExit</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// Randomly sample representatives from node.</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">repIndices</span><span class="p">;</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">default_random_engine</span> <span class="n">generator</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">());</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">distribution</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">_k</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">distribution</span><span class="p">(</span><span class="n">generator</span><span class="p">);</span>
+                        <span class="k">while</span> <span class="p">(</span><span class="n">repIndices</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">nextIndex</span><span class="p">)</span> <span class="o">!=</span> <span class="n">repIndices</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+                            <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">distribution</span><span class="p">(</span><span class="n">generator</span><span class="p">);</span>
+                        <span class="n">repIndices</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">nextIndex</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">clusterRepIndices</span><span class="p">;</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">index</span> <span class="p">:</span> <span class="n">repIndices</span><span class="p">)</span>
+                        <span class="n">clusterRepIndices</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+
+                    <span class="c1">// Generate clustering.</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">clusters</span><span class="p">(</span><span class="n">clusterRepIndices</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="cp">#pragma omp parallel for num_threads(_workerCount)</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">fvIndex</span> <span class="o">=</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nearestIdx</span><span class="p">;</span>
+                        <span class="n">data_t</span> <span class="n">nearestDist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
+
+                        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">clusterRepIndices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="n">data_t</span> <span class="n">repDist</span> <span class="o">=</span> <span class="p">(</span><span class="n">dataset</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">fvIndex</span><span class="p">)</span> <span class="o">-</span> <span class="n">dataset</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">clusterRepIndices</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">j</span><span class="p">))).</span><span class="n">squaredNorm</span><span class="p">();</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">repDist</span> <span class="o">&lt;</span> <span class="n">nearestDist</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="n">nearestDist</span> <span class="o">=</span> <span class="n">repDist</span><span class="p">;</span>
+                                <span class="n">nearestIdx</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// Put vector in bucket.</span>
+<span class="cp">#pragma omp critical</span>
+                        <span class="n">clusters</span><span class="p">[</span><span class="n">nearestIdx</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">fvIndex</span><span class="p">);</span>
+                    <span class="p">}</span>
+
+                    <span class="c1">// Every partition becomes a new node.</span>
+                    <span class="c1">// Check, whether we have found exactly K clusters.</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">clusters</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">_k</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// Iterate all clusters and create new nodes from it.</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">clusters</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="c1">// Create a new node.</span>
+                            <span class="n">Tree</span><span class="o">*</span> <span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tree</span><span class="p">(</span><span class="n">dataset</span><span class="p">);</span>
+                            <span class="n">node</span><span class="o">-&gt;</span><span class="n">vectorIndices</span> <span class="o">=</span> <span class="n">clusters</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                            <span class="n">node</span><span class="o">-&gt;</span><span class="n">representativeIndex</span> <span class="o">=</span> <span class="n">clusterRepIndices</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                            <span class="n">node</span><span class="o">-&gt;</span><span class="n">parent</span> <span class="o">=</span> <span class="n">root</span><span class="p">;</span>
+
+                            <span class="c1">// Assign node to root.</span>
+                            <span class="n">root</span><span class="o">-&gt;</span><span class="n">nodes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+
+                            <span class="c1">// If we have more than k observations in that node, we may create new tasks, which then are subject to further partitioning.</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">_k</span><span class="p">)</span>
+                                <span class="n">treeTasks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="n">Tree</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">treeHeight</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">&amp;*</span><span class="n">node</span><span class="p">));</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span> <span class="k">else</span>
+                        <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;GeneralizedIsolationTree::fit: Clusterer did not return k = &quot;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">_k</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; clusters from &quot;</span>
+                                                 <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot; observations.&quot;</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">treeRoot</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">GIFModel</span> <span class="n">getModel</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">_model</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">OutlierDetectionResult</span> <span class="n">predict</span><span class="p">(</span><span class="k">const</span> <span class="n">MatrixX</span><span class="o">&amp;</span> <span class="n">dataset</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nf">predict</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">_model</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">OutlierDetectionResult</span> <span class="n">predict</span><span class="p">(</span><span class="k">const</span> <span class="n">MatrixX</span><span class="o">&amp;</span> <span class="n">dataset</span><span class="p">,</span> <span class="k">const</span> <span class="n">GIFModel</span><span class="o">&amp;</span> <span class="n">model</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">model</span><span class="p">.</span><span class="n">probabilitiesPerRegion</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+                <span class="c1">// Create a result model.</span>
+                <span class="n">OutlierDetectionResult</span> <span class="n">result</span><span class="p">;</span>
+                <span class="n">result</span><span class="p">.</span><span class="n">probabilities</span> <span class="o">=</span> <span class="n">VectorX</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">());</span>
+
+                <span class="c1">// Make the anomaly decision for every data point.</span>
+<span class="cp">#pragma omp parallel for num_threads(_workerCount)</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// Make KNN query for nearest summary vector.</span>
+                    <span class="kt">size_t</span> <span class="n">nearestSummaryIndex</span><span class="p">;</span>
+                    <span class="n">data_t</span> <span class="n">sqDistance</span><span class="p">;</span>
+                    <span class="n">nanoflann</span><span class="o">::</span><span class="n">KNNResultSet</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span> <span class="n">resultSet</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                    <span class="n">resultSet</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">nearestSummaryIndex</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sqDistance</span><span class="p">);</span>
+
+                    <span class="n">VectorX</span> <span class="n">datasetVector</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+                    <span class="n">model</span><span class="p">.</span><span class="n">dataKDTree</span><span class="o">-&gt;</span><span class="n">index</span><span class="o">-&gt;</span><span class="n">findNeighbors</span><span class="p">(</span><span class="n">resultSet</span><span class="p">,</span> <span class="n">datasetVector</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span> <span class="n">nanoflann</span><span class="o">::</span><span class="n">SearchParams</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+
+                    <span class="c1">// Assign probability values.</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">probabilities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">probabilitiesPerRegion</span><span class="p">[</span><span class="n">nearestSummaryIndex</span><span class="p">];</span>
+                <span class="p">}</span>
+
+                <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span>
+                <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;GeneralizedIsolationTree:predict: No model has been learnt yet. Please call `fit` or `fitPredict` first.&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Learner</span><span class="o">&lt;</span><span class="n">GIFModel</span><span class="p">,</span> <span class="n">OutlierDetectionResult</span><span class="o">&gt;&gt;</span> <span class="n">copy</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeneralizedIsolationTree</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_k</span><span class="p">,</span> <span class="n">_exitCondition</span><span class="p">,</span> <span class="n">_workerCount</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">_k</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">_workerCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">const</span> <span class="n">GIFExitCondition</span><span class="o">&amp;</span> <span class="n">_exitCondition</span><span class="p">;</span>
+        <span class="n">GIFModel</span> <span class="n">_model</span><span class="p">;</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cp">#endif </span><span class="c1">// GENIF_GENERALIZEDISOLATIONTREE_H</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

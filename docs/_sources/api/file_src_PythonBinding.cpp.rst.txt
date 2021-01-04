@@ -1,0 +1,59 @@
+
+.. _file_src_PythonBinding.cpp:
+
+File PythonBinding.cpp
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir_src>` (``src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/PythonBinding.cpp``)
+--------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_PythonBinding.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``pybind11/eigen.h``
+
+- ``pybind11/pybind11.h``
+
+- ``pybind11/stl.h``
+
+- ``src/gif/GeneralizedIsolationForest.h`` (:ref:`file_src_gif_GeneralizedIsolationForest.h`)
+
+- ``src/io/DataTypeHandling.h`` (:ref:`file_src_io_DataTypeHandling.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_genif`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_PythonBinding_8cpp_1ae3f5d49ed1b5cd87ba713f7661209a75`
+

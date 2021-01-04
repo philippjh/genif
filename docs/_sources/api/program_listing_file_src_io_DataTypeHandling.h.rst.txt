@@ -1,0 +1,27 @@
+
+.. _program_listing_file_src_io_DataTypeHandling.h:
+
+Program Listing for File DataTypeHandling.h
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_io_DataTypeHandling.h>` (``src/io/DataTypeHandling.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef GENIF_DATATYPEHANDLING_H_
+   #define GENIF_DATATYPEHANDLING_H_
+   
+   #include "Eigen/Eigen"
+   #include <cfloat>
+   #include <memory>
+   
+   namespace genif {
+       typedef double data_t;
+       typedef Eigen::MatrixXd MatrixX;
+       typedef Eigen::VectorXd VectorX;
+       typedef Eigen::Ref<VectorX, 0, Eigen::InnerStride<>> VectorXRef;
+   }
+   
+   #endif

@@ -1,0 +1,57 @@
+
+.. _file_src_kernels_MaternKernel.h:
+
+File MaternKernel.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_kernels>` (``src/kernels``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/kernels/MaternKernel.h``)
+-------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_kernels_MaternKernel.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Kernel.h`` (:ref:`file_src_kernels_Kernel.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_gif_GIFExitCondition.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_genif`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classgenif_1_1MaternKernel`
+

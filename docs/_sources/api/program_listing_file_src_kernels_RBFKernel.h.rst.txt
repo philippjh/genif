@@ -1,0 +1,52 @@
+
+.. _program_listing_file_src_kernels_RBFKernel.h:
+
+Program Listing for File RBFKernel.h
+====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_kernels_RBFKernel.h>` (``src/kernels/RBFKernel.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef GENIF_RBFKERNEL_H
+   #define GENIF_RBFKERNEL_H
+   
+   #include "Kernel.h"
+   
+   namespace genif {
+       class RBFKernel : public Kernel {
+       public:
+           using Kernel::operator();
+   
+           RBFKernel() = default;
+   
+           explicit RBFKernel(data_t sigma) : RBFKernel(sigma, 1.0) {
+           }
+   
+           RBFKernel(data_t sigma, data_t l) : _l2(std::pow(l, 2.0)) {
+               _sigma = sigma;
+               _denom = 2.0 * std::pow(_sigma, 2.0);
+           };
+   
+           inline data_t operator()(const VectorX& x1, const VectorX& x2) const override {
+               return _l2 * std::exp(-((x1 - x2).squaredNorm()) / _denom);
+           }
+   
+           data_t getSigma() const {
+               return _sigma;
+           }
+   
+           data_t getL() const {
+               return sqrt(_l2);
+           }
+   
+       private:
+           data_t _sigma = 1.0;
+           data_t _denom = 0.0;
+           data_t _l2 = 1.0;
+       };
+   }
+   
+   #endif // GENIF_RBFKERNEL_H

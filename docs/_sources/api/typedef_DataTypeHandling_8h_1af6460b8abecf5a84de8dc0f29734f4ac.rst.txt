@@ -1,0 +1,13 @@
+.. _exhale_typedef_DataTypeHandling_8h_1af6460b8abecf5a84de8dc0f29734f4ac:
+
+Typedef genif::VectorXRef
+=========================
+
+- Defined in :ref:`file_src_io_DataTypeHandling.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: genif::VectorXRef

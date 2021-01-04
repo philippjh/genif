@@ -1,0 +1,13 @@
+.. _exhale_typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14:
+
+Typedef genif::MatrixX
+======================
+
+- Defined in :ref:`file_src_io_DataTypeHandling.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: genif::MatrixX

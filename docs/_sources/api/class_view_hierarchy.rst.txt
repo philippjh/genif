@@ -1,0 +1,18 @@
+
+Class Hierarchy
+---------------
+
+
+.. raw:: html
+
+   <ul class="treeView" id="class-treeView">
+     <li>
+       <ul class="collapsibleList">
+         <li class="lastChild">Namespace <a href="namespace_genif.html#namespace-genif">genif</a><ul><li>Struct <a href="structgenif_1_1GIFModel.html#exhale-struct-structgenif-1-1GIFModel">GIFModel</a></li><li>Struct <a href="structgenif_1_1OutlierDetectionResult.html#exhale-struct-structgenif-1-1OutlierDetectionResult">OutlierDetectionResult</a></li><li>Struct <a href="structgenif_1_1Tree.html#exhale-struct-structgenif-1-1Tree">Tree</a></li><li>Template Class <a href="classgenif_1_1BaggingEnsemble.html#exhale-class-classgenif-1-1BaggingEnsemble">BaggingEnsemble</a></li><li>Class <a href="classgenif_1_1GeneralizedIsolationForest.html#exhale-class-classgenif-1-1GeneralizedIsolationForest">GeneralizedIsolationForest</a></li><li>Class <a href="classgenif_1_1GeneralizedIsolationTree.html#exhale-class-classgenif-1-1GeneralizedIsolationTree">GeneralizedIsolationTree</a></li><li>Class <a href="classgenif_1_1GIFExitCondition.html#exhale-class-classgenif-1-1GIFExitCondition">GIFExitCondition</a></li><li>Class <a href="classgenif_1_1GIFExitConditionAverageKernelValue.html#exhale-class-classgenif-1-1GIFExitConditionAverageKernelValue">GIFExitConditionAverageKernelValue</a></li><li>Class <a href="classgenif_1_1Kernel.html#exhale-class-classgenif-1-1Kernel">Kernel</a></li><li>Template Class <a href="classgenif_1_1Learner.html#exhale-class-classgenif-1-1Learner">Learner</a></li><li>Class <a href="classgenif_1_1MaternKernel.html#exhale-class-classgenif-1-1MaternKernel">MaternKernel</a></li><li>Class <a href="classgenif_1_1RBFKernel.html#exhale-class-classgenif-1-1RBFKernel">RBFKernel</a></li><li class="lastChild">Class <a href="classgenif_1_1Tools.html#exhale-class-classgenif-1-1Tools">Tools</a></li></ul></li>
+       </ul>
+     </li><!-- only tree view element -->
+   </ul><!-- /treeView class-treeView -->
+
+.. end raw html for treeView
+
+

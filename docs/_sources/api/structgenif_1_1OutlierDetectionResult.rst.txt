@@ -1,0 +1,16 @@
+.. _exhale_struct_structgenif_1_1OutlierDetectionResult:
+
+Struct OutlierDetectionResult
+=============================
+
+- Defined in :ref:`file_src_OutlierDetectionResult.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: genif::OutlierDetectionResult
+   :members:
+   :protected-members:
+   :undoc-members:

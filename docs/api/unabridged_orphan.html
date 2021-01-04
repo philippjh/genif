@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Full API &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Full API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/unabridged_orphan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="directories">
+<h2>Directories<a class="headerlink" href="#directories" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src.html">Directory src</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html#subdirectories">Subdirectories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_gif.html">Directory gif</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_gif.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_io.html">Directory io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_io.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_kernels.html">Directory kernels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_kernels.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_BaggingEnsemble.h.html">File BaggingEnsemble.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_BaggingEnsemble.h.html#definition-src-baggingensemble-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/BaggingEnsemble.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_BaggingEnsemble.h.html">Program Listing for File BaggingEnsemble.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_BaggingEnsemble.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_BaggingEnsemble.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_BaggingEnsemble.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_BaggingEnsemble.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_io_DataTypeHandling.h.html">File DataTypeHandling.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_io_DataTypeHandling.h.html#definition-src-io-datatypehandling-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/io/DataTypeHandling.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_io_DataTypeHandling.h.html">Program Listing for File DataTypeHandling.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_io_DataTypeHandling.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_io_DataTypeHandling.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_io_DataTypeHandling.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_io_DataTypeHandling.h.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_gif_GeneralizedIsolationForest.h.html">File GeneralizedIsolationForest.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationForest.h.html#definition-src-gif-generalizedisolationforest-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/gif/GeneralizedIsolationForest.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_gif_GeneralizedIsolationForest.h.html">Program Listing for File GeneralizedIsolationForest.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationForest.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationForest.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationForest.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationForest.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html">File GeneralizedIsolationTree.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#definition-src-gif-generalizedisolationtree-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/gif/GeneralizedIsolationTree.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_gif_GeneralizedIsolationTree.h.html">Program Listing for File GeneralizedIsolationTree.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_gif_GIFExitCondition.h.html">File GIFExitCondition.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFExitCondition.h.html#definition-src-gif-gifexitcondition-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/gif/GIFExitCondition.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_gif_GIFExitCondition.h.html">Program Listing for File GIFExitCondition.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFExitCondition.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFExitCondition.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFExitCondition.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFExitCondition.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_gif_GIFModel.h.html">File GIFModel.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFModel.h.html#definition-src-gif-gifmodel-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/gif/GIFModel.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_gif_GIFModel.h.html">Program Listing for File GIFModel.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFModel.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFModel.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFModel.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_GIFModel.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_kernels_Kernel.h.html">File Kernel.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_Kernel.h.html#definition-src-kernels-kernel-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/kernels/Kernel.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_kernels_Kernel.h.html">Program Listing for File Kernel.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_Kernel.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_Kernel.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_Kernel.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_Kernel.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_Learner.h.html">File Learner.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Learner.h.html#definition-src-learner-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/Learner.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_Learner.h.html">Program Listing for File Learner.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Learner.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Learner.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Learner.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Learner.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_kernels_MaternKernel.h.html">File MaternKernel.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_MaternKernel.h.html#definition-src-kernels-maternkernel-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/kernels/MaternKernel.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_kernels_MaternKernel.h.html">Program Listing for File MaternKernel.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_MaternKernel.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_MaternKernel.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_MaternKernel.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_MaternKernel.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_OutlierDetectionResult.h.html">File OutlierDetectionResult.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_OutlierDetectionResult.h.html#definition-src-outlierdetectionresult-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/OutlierDetectionResult.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_OutlierDetectionResult.h.html">Program Listing for File OutlierDetectionResult.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_OutlierDetectionResult.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_OutlierDetectionResult.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_OutlierDetectionResult.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_OutlierDetectionResult.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_PythonBinding.cpp.html">File PythonBinding.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PythonBinding.cpp.html#definition-src-pythonbinding-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/PythonBinding.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_PythonBinding.cpp.html">Program Listing for File PythonBinding.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PythonBinding.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PythonBinding.cpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_PythonBinding.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_kernels_RBFKernel.h.html">File RBFKernel.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_RBFKernel.h.html#definition-src-kernels-rbfkernel-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/kernels/RBFKernel.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_kernels_RBFKernel.h.html">Program Listing for File RBFKernel.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_RBFKernel.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_RBFKernel.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_RBFKernel.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_kernels_RBFKernel.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_Tools.h.html">File Tools.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Tools.h.html#definition-src-tools-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/Tools.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_Tools.h.html">Program Listing for File Tools.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Tools.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Tools.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Tools.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_Tools.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_gif_Tree.h.html">File Tree.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_Tree.h.html#definition-src-gif-tree-h">Definition (<code class="docutils literal notranslate"><span class="pre">src/gif/Tree.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_gif_Tree.h.html">Program Listing for File Tree.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_Tree.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_Tree.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_Tree.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_gif_Tree.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.. _exhale_struct_structgenif_1_1GIFModel:
+
+Struct GIFModel
+===============
+
+- Defined in :ref:`file_src_gif_GIFModel.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: genif::GIFModel
+   :members:
+   :protected-members:
+   :undoc-members:

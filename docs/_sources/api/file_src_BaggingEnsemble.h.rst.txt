@@ -1,0 +1,61 @@
+
+.. _file_src_BaggingEnsemble.h:
+
+File BaggingEnsemble.h
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir_src>` (``src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/BaggingEnsemble.h``)
+--------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_BaggingEnsemble.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``chrono``
+
+- ``random``
+
+- ``src/Learner.h`` (:ref:`file_src_Learner.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_gif_GeneralizedIsolationForest.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_genif`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classgenif_1_1BaggingEnsemble`
+

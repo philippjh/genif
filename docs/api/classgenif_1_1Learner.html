@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Template Class Learner &mdash; Generalized Isolation Forest Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class MaternKernel" href="classgenif_1_1MaternKernel.html" />
+    <link rel="prev" title="Class Kernel" href="classgenif_1_1Kernel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Generalized Isolation Forest</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">C++ API</a> &raquo;</li>
+        
+      <li>Template Class Learner</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classgenif_1_1Learner.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="template-class-learner">
+<span id="exhale-class-classgenif-1-1learner"></span><h1>Template Class Learner<a class="headerlink" href="#template-class-learner" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_Learner.h.html#file-src-learner-h"><span class="std std-ref">File Learner.h</span></a></p></li>
+</ul>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv4I00EN5genif7LearnerE">
+<span id="_CPPv3I00EN5genif7LearnerE"></span><span id="_CPPv2I00EN5genif7LearnerE"></span>template&lt;typename <code class="sig-name descname">ModelType</code>, typename <code class="sig-name descname">PredictionType</code>&gt;<br /><span class="target" id="classgenif_1_1Learner"></span><em class="property">class </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Learner</code><a class="headerlink" href="#_CPPv4I00EN5genif7LearnerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides a standardized interface for learning algorithms. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5genif7Learner3fitERK7MatrixX">
+<span id="_CPPv3N5genif7Learner3fitERK7MatrixX"></span><span id="_CPPv2N5genif7Learner3fitERK7MatrixX"></span><span id="genif::Learner::fit__MatrixXCR"></span><span class="target" id="classgenif_1_1Learner_1a9dfe9635d28430f241c439dc20b30dd0"></span><a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;<a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::ModelType">ModelType</a>, <a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::PredictionType">PredictionType</a>&gt; &amp;<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif7Learner3fitERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fits the learner using a given dataset. Classes implementing this method should assign the learned model to themselves, which can then be retrieved using the <a class="reference internal" href="#classgenif_1_1Learner_1ad32fb310bc53fa66c1f7724c51e1c9da"><span class="std std-ref">getModel()</span></a> method.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A reference to the learner. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset, which should be used for fitting. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif7Learner10fitPredictERK7MatrixX">
+<span id="_CPPv3N5genif7Learner10fitPredictERK7MatrixX"></span><span id="_CPPv2N5genif7Learner10fitPredictERK7MatrixX"></span><span id="genif::Learner::fitPredict__MatrixXCR"></span><span class="target" id="classgenif_1_1Learner_1a7ee9b6fc2dfe0409fec89114dca6a235"></span><a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::PredictionType">PredictionType</a> <code class="sig-name descname">fitPredict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif7Learner10fitPredictERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fits the learner using a given dataset and returns predictions based on it. Classes implementing this method should assign the learned model to themselves, which can then be retrieved using the <a class="reference internal" href="#classgenif_1_1Learner_1ad32fb310bc53fa66c1f7724c51e1c9da"><span class="std std-ref">getModel()</span></a> method.</p>
+<p>The behaviour of this method should be equal to running the <a class="reference internal" href="#classgenif_1_1Learner_1a9dfe9635d28430f241c439dc20b30dd0"><span class="std std-ref">fit()</span></a> and the <a class="reference internal" href="#classgenif_1_1Learner_1ac4851bb609b7eca709a2cdd6f7c8deb4"><span class="std std-ref">predict()</span></a> method.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Predictions, which were made by using the dataset. The actual type of prediction, which is made, is determined by the PredictionType template parameter. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset, which should be used for fitting and predicting. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif7Learner7predictERK7MatrixX">
+<span id="_CPPv3NK5genif7Learner7predictERK7MatrixX"></span><span id="_CPPv2NK5genif7Learner7predictERK7MatrixX"></span><span id="genif::Learner::predict__MatrixXCRC"></span><span class="target" id="classgenif_1_1Learner_1ac4851bb609b7eca709a2cdd6f7c8deb4"></span><a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::PredictionType">PredictionType</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif7Learner7predictERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Make predictions using a priorly fitted model and a given dataset. Classes implementing this method should use the same model, which is given by the <a class="reference internal" href="#classgenif_1_1Learner_1ad32fb310bc53fa66c1f7724c51e1c9da"><span class="std std-ref">getModel()</span></a> method and which is usually found by invoking the <a class="reference internal" href="#classgenif_1_1Learner_1a9dfe9635d28430f241c439dc20b30dd0"><span class="std std-ref">fit()</span></a> method.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Predictions, which were made by using the dataset. The actual type of prediction, which is made, is determined by the PredictionType template parameter. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset, which should be used for predicting. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif7Learner7predictERK7MatrixXRK9ModelType">
+<span id="_CPPv3NK5genif7Learner7predictERK7MatrixXRK9ModelType"></span><span id="_CPPv2NK5genif7Learner7predictERK7MatrixXRK9ModelType"></span><span id="genif::Learner::predict__MatrixXCR.ModelTypeCRC"></span><span class="target" id="classgenif_1_1Learner_1ad633a276c871789a9677a2f64da2311c"></span><a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::PredictionType">PredictionType</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::ModelType">ModelType</a> &amp;<em>model</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif7Learner7predictERK7MatrixXRK9ModelType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Make predictions using a priorly fitted model and a given dataset. Classes implementing this method should use the same model, which is given by the <a class="reference internal" href="#classgenif_1_1Learner_1ad32fb310bc53fa66c1f7724c51e1c9da"><span class="std std-ref">getModel()</span></a> method and which is usually found by invoking the <a class="reference internal" href="#classgenif_1_1Learner_1a9dfe9635d28430f241c439dc20b30dd0"><span class="std std-ref">fit()</span></a> method.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Predictions, which were made by using the dataset. The actual type of prediction, which is made, is determined by the PredictionType template parameter. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset</span></code>: The dataset, which should be used for predicting. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The fitted model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif7Learner8getModelEv">
+<span id="_CPPv3NK5genif7Learner8getModelEv"></span><span id="_CPPv2NK5genif7Learner8getModelEv"></span><span id="genif::Learner::getModelC"></span><span class="target" id="classgenif_1_1Learner_1ad32fb310bc53fa66c1f7724c51e1c9da"></span><a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::ModelType">ModelType</a> <code class="sig-name descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif7Learner8getModelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the currently fitted model.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The currently fitted model. The actual type of model, which is returned by this method, is determined by the ModelType template parameter. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5genif7Learner4copyEv">
+<span id="_CPPv3NK5genif7Learner4copyEv"></span><span id="_CPPv2NK5genif7Learner4copyEv"></span><span id="genif::Learner::copyC"></span><span class="target" id="classgenif_1_1Learner_1aa5ee0577cd393b1ea9100e5171fc2de3"></span>std::unique_ptr&lt;<a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner">Learner</a>&lt;<a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::ModelType">ModelType</a>, <a class="reference internal" href="#_CPPv4I00EN5genif7LearnerE" title="genif::Learner::PredictionType">PredictionType</a>&gt;&gt; <code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif7Learner4copyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Takes a copy of the learner and returns it. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Non-const copy of the learner. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5genif7LearnerD0Ev">
+<span id="_CPPv3N5genif7LearnerD0Ev"></span><span id="_CPPv2N5genif7LearnerD0Ev"></span><span id="genif::Learner::~Learner"></span><span class="target" id="classgenif_1_1Learner_1a9460d0d3c4b50ad336a64d30ff2ce55c"></span><code class="sig-name descname">~Learner</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<a class="headerlink" href="#_CPPv4N5genif7LearnerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Learners destructor. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classgenif_1_1MaternKernel.html" class="btn btn-neutral float-right" title="Class MaternKernel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classgenif_1_1Kernel.html" class="btn btn-neutral float-left" title="Class Kernel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

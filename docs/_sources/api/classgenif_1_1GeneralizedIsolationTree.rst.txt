@@ -1,0 +1,25 @@
+.. _exhale_class_classgenif_1_1GeneralizedIsolationTree:
+
+Class GeneralizedIsolationTree
+==============================
+
+- Defined in :ref:`file_src_gif_GeneralizedIsolationTree.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public genif::Learner< GIFModel, OutlierDetectionResult >`` (:ref:`exhale_class_classgenif_1_1Learner`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::GeneralizedIsolationTree
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,73 @@
+
+.. _file_src_io_DataTypeHandling.h:
+
+File DataTypeHandling.h
+=======================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_io>` (``src/io``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/io/DataTypeHandling.h``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_io_DataTypeHandling.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Eigen/Eigen``
+
+- ``cfloat``
+
+- ``memory``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_gif_Tree.h`
+
+- :ref:`file_src_Learner.h`
+
+- :ref:`file_src_OutlierDetectionResult.h`
+
+- :ref:`file_src_PythonBinding.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_genif`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697`
+
+- :ref:`exhale_typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14`
+
+- :ref:`exhale_typedef_DataTypeHandling_8h_1ac7f373529e883cf687f5ef3313ea1f45`
+
+- :ref:`exhale_typedef_DataTypeHandling_8h_1af6460b8abecf5a84de8dc0f29734f4ac`
+

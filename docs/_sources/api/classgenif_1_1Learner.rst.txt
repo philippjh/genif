@@ -1,0 +1,16 @@
+.. _exhale_class_classgenif_1_1Learner:
+
+Template Class Learner
+======================
+
+- Defined in :ref:`file_src_Learner.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::Learner
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,27 @@
+
+.. _program_listing_file_src_kernels_Kernel.h:
+
+Program Listing for File Kernel.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_kernels_Kernel.h>` (``src/kernels/Kernel.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef GENIF_KERNEL_H
+   #define GENIF_KERNEL_H
+   
+   #include "Kernel.h"
+   
+   namespace genif {
+       class Kernel {
+       public:
+           virtual data_t operator()(const VectorX& x1, const VectorX& x2) const = 0;
+   
+           virtual ~Kernel() = default;
+       };
+   }
+   
+   #endif // GENIF_KERNEL_H

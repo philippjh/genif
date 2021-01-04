@@ -1,0 +1,13 @@
+.. _exhale_typedef_DataTypeHandling_8h_1ac7f373529e883cf687f5ef3313ea1f45:
+
+Typedef genif::VectorX
+======================
+
+- Defined in :ref:`file_src_io_DataTypeHandling.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: genif::VectorX

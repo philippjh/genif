@@ -1,0 +1,25 @@
+.. _exhale_class_classgenif_1_1GeneralizedIsolationForest:
+
+Class GeneralizedIsolationForest
+================================
+
+- Defined in :ref:`file_src_gif_GeneralizedIsolationForest.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public genif::Learner< std::vector< GIFModel >, VectorX >`` (:ref:`exhale_class_classgenif_1_1Learner`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::GeneralizedIsolationForest
+   :members:
+   :protected-members:
+   :undoc-members:

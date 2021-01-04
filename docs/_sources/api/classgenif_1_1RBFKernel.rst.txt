@@ -1,0 +1,25 @@
+.. _exhale_class_classgenif_1_1RBFKernel:
+
+Class RBFKernel
+===============
+
+- Defined in :ref:`file_src_kernels_RBFKernel.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public genif::Kernel`` (:ref:`exhale_class_classgenif_1_1Kernel`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::RBFKernel
+   :members:
+   :protected-members:
+   :undoc-members:

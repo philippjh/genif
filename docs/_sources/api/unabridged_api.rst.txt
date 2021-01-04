@@ -1,0 +1,114 @@
+
+Full API
+--------
+
+Namespaces
+**********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   namespace_genif.rst
+
+Classes and Structs
+*******************
+
+
+.. toctree::
+   :maxdepth: 5
+
+   structgenif_1_1GIFModel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structgenif_1_1OutlierDetectionResult.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structgenif_1_1Tree.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1BaggingEnsemble.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1GeneralizedIsolationForest.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1GeneralizedIsolationTree.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1GIFExitCondition.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1GIFExitConditionAverageKernelValue.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1Kernel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1Learner.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1MaternKernel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1RBFKernel.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classgenif_1_1Tools.rst
+
+Functions
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   function_PythonBinding_8cpp_1ae3f5d49ed1b5cd87ba713f7661209a75.rst
+
+Typedefs
+********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_DataTypeHandling_8h_1ac7f373529e883cf687f5ef3313ea1f45.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   typedef_DataTypeHandling_8h_1af6460b8abecf5a84de8dc0f29734f4ac.rst

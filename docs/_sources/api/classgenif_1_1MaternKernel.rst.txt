@@ -1,0 +1,25 @@
+.. _exhale_class_classgenif_1_1MaternKernel:
+
+Class MaternKernel
+==================
+
+- Defined in :ref:`file_src_kernels_MaternKernel.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public genif::Kernel`` (:ref:`exhale_class_classgenif_1_1Kernel`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: genif::MaternKernel
+   :members:
+   :protected-members:
+   :undoc-members:
