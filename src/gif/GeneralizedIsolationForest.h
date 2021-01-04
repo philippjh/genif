@@ -51,9 +51,9 @@ namespace genif {
             VectorX y(dataset.rows());
             for (unsigned int i = 0; i < dataset.rows(); i++) {
                 data_t predictionSum = 0.0;
-                for (unsigned int j = 0; j < _gtrBagging.getNumberOfModels(); j++)
+                for (unsigned int j = 0; j < _gtrBagging.getActualNumberOfModels(); j++)
                     predictionSum += predictions[j].getProbabilities()[i];
-                y[i] = predictionSum / static_cast<data_t>(_gtrBagging.getNumberOfModels());
+                y[i] = predictionSum / static_cast<data_t>(_gtrBagging.getActualNumberOfModels());
             }
             return y;
         }

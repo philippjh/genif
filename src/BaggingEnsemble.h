@@ -112,6 +112,14 @@ namespace genif {
             return _nModels;
         }
 
+        /**
+         * Returns the number of models, which have been fitted in this ensemble.
+         * @return As stated above.
+         */
+        unsigned int getActualNumberOfModels() const {
+            return _models.size();
+        }
+
     private:
         const Learner<ModelType, PredictionType>& _baseLearner;
         unsigned int _nModels;
