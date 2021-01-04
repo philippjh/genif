@@ -7,7 +7,7 @@ import multiprocessing
 from setuptools import setup, Extension
 from setuptools.command.build_ext import build_ext
 from distutils.version import LooseVersion
-
+from os import path
 
 class CMakeExtension(Extension):
     def __init__(self, name, sourcedir=''):
@@ -54,6 +54,9 @@ class CMakeBuild(build_ext):
         subprocess.check_call(['cmake', ext.sourcedir] + cmake_args, cwd=self.build_temp, env=env)
         subprocess.check_call(['cmake', '--build', '.', '--target', 'genif'] + build_args, cwd=self.build_temp)
 
+# Read README.md file into memory.
+with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='genif',
@@ -61,7 +64,8 @@ setup(
     author='Philipp-Jan Honysz',
     author_email='philipp.honysz@udo.edu',
     description='Generalized Isolation Forest',
-    long_description='',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     ext_modules=[CMakeExtension('genif')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False
