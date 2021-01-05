@@ -55,7 +55,7 @@ namespace genif {
             // Delete the tree since we do not need it anymore.
             delete treeRoot;
 
-            // Create a SubmodularOutlierModel instance.
+            // Create a GIFModel instance.
             GIFModel resultModel;
 
             // Build matrix from leaf nodes.
@@ -131,14 +131,12 @@ namespace genif {
                     std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
                     std::uniform_int_distribution<unsigned int> distribution(0, root->vectorIndices.size() - 1);
                     for (unsigned int j = 0; j < _k; j++) {
-                        unsigned int nextIndex = distribution(generator);
+                        unsigned int nextIndex = root->vectorIndices[distribution(generator)];
                         while (repIndices.find(nextIndex) != repIndices.end())
-                            nextIndex = distribution(generator);
+                            nextIndex = root->vectorIndices[distribution(generator)];
                         repIndices.insert(nextIndex);
                     }
-                    std::vector<unsigned int> clusterRepIndices;
-                    for (auto& index : repIndices)
-                        clusterRepIndices.push_back(index);
+                    std::vector<unsigned int> clusterRepIndices(repIndices.begin(), repIndices.end());
 
                     // Generate clustering.
                     std::vector<std::vector<unsigned int>> clusters(clusterRepIndices.size());
