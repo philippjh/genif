@@ -18,9 +18,10 @@ namespace genif {
          * @param k The number of representatives to find for each node.
          * @param exitCondition An exit condition, which controls, when tree induction is stopped.
          * @param workerCount Number of workers to consider.
+         * @param seed Seed to use for random number generation (-1 defaults to sysclock seed). Pass an integer for constant result across multiple runs.
          */
-        GeneralizedIsolationTree(unsigned int k, const GIFExitCondition& exitCondition, unsigned int workerCount) :
-            _k(k), _workerCount(workerCount), _exitCondition(exitCondition) {
+        GeneralizedIsolationTree(unsigned int k, const GIFExitCondition& exitCondition, unsigned int workerCount, int seed = -1) :
+            _k(k), _workerCount(workerCount), _exitCondition(exitCondition), _seed(seed) {
             if (_k <= 1)
                 throw std::runtime_error("GeneralizedIsolationTree::GeneralizedIsolationTree: k needs to be at least two.");
             if (_workerCount < 1)
@@ -55,7 +56,7 @@ namespace genif {
             // Delete the tree since we do not need it anymore.
             delete treeRoot;
 
-            // Create a SubmodularOutlierModel instance.
+            // Create a GIFModel instance.
             GIFModel resultModel;
 
             // Build matrix from leaf nodes.
@@ -90,7 +91,7 @@ namespace genif {
             for (unsigned long i = 0; i < resultModel.dataMatrix->rows(); i++)
                 resultModel.probabilitiesPerRegion[i] = static_cast<data_t>(resultModel.countsPerRegion[i]) / static_cast<data_t>(dataset.size());
 
-            // Asssign properties.
+            // Assign properties.
             resultModel.dataKDTree = kdTree;
             _model = resultModel;
 
@@ -103,6 +104,9 @@ namespace genif {
          * @return A raw pointer to the induced tree.
          */
         Tree* findTree(const MatrixX& dataset) {
+            // Create PRNG.
+            std::default_random_engine generator(_seed >= 0 ? _seed : std::chrono::system_clock::now().time_since_epoch().count());
+
             // Initialize a tree.
             Tree* treeRoot = new Tree(dataset);
             for (unsigned int i = 0; i < dataset.rows(); i++)
@@ -128,17 +132,14 @@ namespace genif {
                 if (!shouldExit) {
                     // Randomly sample representatives from node.
                     std::set<unsigned int> repIndices;
-                    std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
                     std::uniform_int_distribution<unsigned int> distribution(0, root->vectorIndices.size() - 1);
                     for (unsigned int j = 0; j < _k; j++) {
-                        unsigned int nextIndex = distribution(generator);
+                        unsigned int nextIndex = root->vectorIndices[distribution(generator)];
                         while (repIndices.find(nextIndex) != repIndices.end())
-                            nextIndex = distribution(generator);
+                            nextIndex = root->vectorIndices[distribution(generator)];
                         repIndices.insert(nextIndex);
                     }
-                    std::vector<unsigned int> clusterRepIndices;
-                    for (auto& index : repIndices)
-                        clusterRepIndices.push_back(index);
+                    std::vector<unsigned int> clusterRepIndices(repIndices.begin(), repIndices.end());
 
                     // Generate clustering.
                     std::vector<std::vector<unsigned int>> clusters(clusterRepIndices.size());
@@ -243,12 +244,13 @@ namespace genif {
          * @return An unique_ptr pointing to a copy of this instance.
          */
         std::unique_ptr<Learner<GIFModel, OutlierDetectionResult>> copy() const override {
-            return std::make_unique<GeneralizedIsolationTree>(_k, _exitCondition, _workerCount);
+            return std::make_unique<GeneralizedIsolationTree>(_k, _exitCondition, _workerCount, _seed);
         }
 
     private:
         unsigned int _k = 10;
         unsigned int _workerCount = 1;
+        int _seed;
         const GIFExitCondition& _exitCondition;
         GIFModel _model;
     };

@@ -11,8 +11,8 @@ namespace genif {
 
         // Tree data.
         const MatrixX& dataset;
-        std::vector<unsigned int> vectorIndices;
-        unsigned int representativeIndex;
+        std::vector<unsigned int> vectorIndices; // The indices of the vectors included in that node.
+        unsigned int representativeIndex; // The index of the representative vector of this node.
 
         Tree(const MatrixX& dataset) : dataset(dataset) {
             // Constructor.

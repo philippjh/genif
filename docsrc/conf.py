@@ -3,6 +3,7 @@ extensions = [
     'exhale',
     "sphinx_rtd_theme",
     "sphinx.ext.autodoc",
+    "nbsphinx"
 ]
 autodoc_typehints = 'none'
 autodoc_docstring_signature = True
