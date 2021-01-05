@@ -91,7 +91,7 @@ namespace genif {
             for (unsigned long i = 0; i < resultModel.dataMatrix->rows(); i++)
                 resultModel.probabilitiesPerRegion[i] = static_cast<data_t>(resultModel.countsPerRegion[i]) / static_cast<data_t>(dataset.size());
 
-            // Asssign properties.
+            // Assign properties.
             resultModel.dataKDTree = kdTree;
             _model = resultModel;
 

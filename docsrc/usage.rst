@@ -1,6 +1,6 @@
-=====
-Usage
-=====
+==============
+Advanced Usage
+==============
 
 Once you have installed (for Python users) or downloaded (for C++ users) the package, the module can be used in two different ways, either by importing ``genif`` into Python or by
 including the respective sources into your C++ project.
@@ -8,9 +8,12 @@ including the respective sources into your C++ project.
 Python
 ======
 
+Basic operation
+---------------
+
 The main functionality of this package is implemented in the :py:class:`genif.GeneralizedIsolationForest` class. For convenience, this class follows the well-established principle
-of librarys like ``scikit-learn``, which requires classifiers to provide a ``fit``, ``fit_predict`` and ``predict`` method. A very basic example using this library can hence be
-given as follows:
+of librarys like ``scikit-learn``, which require classifiers to provide a :py:meth:`genif.GeneralizedIsolationForest.fit`, :py:meth:`genif.GeneralizedIsolationForest.fit_predict`
+and a :py:meth:`genif.GeneralizedIsolationForest.predict` method. A very basic example using this library can hence be given as follows:
 
 .. code-block:: python
 
@@ -26,19 +29,22 @@ given as follows:
     gif = GeneralizedIsolationForest(k=10, n_models=50, sample_size=256,
                                      kernel="rbf", kernel_scaling=[0.05], sigma=0.01)
 
-    # Fit the classifier and make predictions.
+    # Fit the classifier and make predictions.aa
     y_pred = gif.fit_predict(X)
 
-For this example, we chose to divide every data region into ``k=10``. The algorithm will fit a total of 50 trees, each considering a sample of the provided dataset containing 256
-observations. To decide, when tree induction is terminated, the algorithm relies on a RBF kernel which is scales to 0.05. Tree induction is terminated, when the pairwise average
-kernel value of observations in a particular exceeds 0.01.
+For this example, we chose to divide every data region into ``k=10`` subregions. The algorithm will fit a total of 50 trees, each considering a sample of the provided dataset
+containing 256 observations. To decide, when tree induction is terminated, the algorithm relies on a RBF kernel which is scaled to 0.05. Tree induction is terminated, when the
+pairwise average kernel value of observations in a particular subregion exceeds 0.01.
 
 The GIF algorithm internally fits a forest of Generalized Isolation Trees and estimates inlier probabilities for each found data region. After the procedure finished, the returned
-values is assigned to ``y_pred``, which contains a vector of ``N = 1000`` entries each describing the probability for every input data vector to be inlying or not. High probability
+valued is assigned to ``y_pred``, which contains a vector of ``N = 1000`` entries each describing the probability for every input data vector to be inlying or not. High probability
 values, which are near one, therefore indicate conforming (i.e. "normal") behaviour. Conversely, probability values near zero indicate non-conforming (i.e. "anomalous") behaviour.
 
-It is also possible to fit the GIF on one dataset, while using another dataset for the actual predictions you want to make. In this case, you will need to call ``fit`` and
-``predict`` independently:
+Independent training and testing
+--------------------------------
+
+It is also possible to fit the GIF on one dataset, while using another dataset for the actual predictions you want to make. In this case, you will need to call
+:py:meth:`genif.GeneralizedIsolationForest.fit` and :py:meth:`genif.GeneralizedIsolationForest.predict` independently:
 
 .. code-block:: python
 
@@ -55,6 +61,13 @@ It is also possible to fit the GIF on one dataset, while using another dataset f
 
     # Fit the classifier and make predictions.
     y_pred = gif.fit(X_training).predict(X_testing)
+
+.. warning::
+
+    Remember, that calling ``predict`` without prior call to ``fit`` results in receiving an exception.
+
+Vary used kernels
+-----------------
 
 You may also want to choose another kernel to check for tree induction termination. Besides the RBF kernel, the class of Matèrn kernels is supported with
 :math:`\nu \in \left\lbrace 1/2, 3/2, 5/2 \right\rbrace`, which can be selected in code by replacing ``rbf`` with ``matern-d1``, ``matern-d3``, ``matern-d5`` respectively. Please

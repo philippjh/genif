@@ -46,6 +46,8 @@ Building is then conducted by following these steps:
 .. toctree::
     :hidden:
 
+    quickstart.ipynb
+    example.ipynb
     usage
     pythonapi
     api/library_root
