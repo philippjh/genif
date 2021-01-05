@@ -1,12 +1,11 @@
-# Generalized Isolation Forest ![PyPI](https://img.shields.io/pypi/v/genif) ![PyPI - Format](https://img.shields.io/pypi/format/genif)
+# Generalized Isolation Forest [![Read Manual](https://img.shields.io/badge/read-manual-informational)](https://philippjh.github.io/genif/) [![PyPI](https://img.shields.io/pypi/v/genif)](https://pypi.org/project/genif/) [![PyPI - Format](https://img.shields.io/pypi/format/genif)](https://pypi.org/project/genif/)
 
 This repository provides an Python implementation of the "Generalized Isolation Forest" (GIF) algorithm for unsupervised detection of outliers in data. 
 GIF has originally been proposed in:
 
 > Buschjäger, S., Honysz, PJ. & Morik, K. Randomized outlier detection with trees. International Journal of Data Science and Analytics (2020). https://doi.org/10.1007/s41060-020-00238-w
 
-A Jupyter notebook demonstrating the use of the package can be viewed [here](https://github.com/philippjh/genif/blob/master/demo/demo.ipynb). More information on this package, 
-especially how to use this within C++, is given [here](https://philippjh.github.io/genif/).
+More information on this package, including a quick start guide, examples and how to use this within C++, is given [here](https://philippjh.github.io/genif/).
 
 ## Install from the Python Package Index (PyPI, recommended)
 

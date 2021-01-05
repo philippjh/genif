@@ -16,7 +16,7 @@ underlying probability distribution to identify non-conforming observations. The
 This package provides an implementation of the GIF algorithm, which is accessible from Python and C++.
 
 
-Install from the Python Package Index (PyPI, recommended) |pypibadge|
+Install from PyPI (recommended) |pypibadge|
 =====================================================================
 
 We provide Linux wheel packages for various Python versions, which can be installed like this:
