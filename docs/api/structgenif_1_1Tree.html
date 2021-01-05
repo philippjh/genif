@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Struct Tree &mdash; Generalized Isolation Forest Documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -33,7 +36,9 @@
         <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -55,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+            <a href="../index.html" class="icon icon-home"> Generalized Isolation Forest
           
 
           
@@ -87,7 +92,9 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Advanced Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
 </ul>
@@ -130,6 +137,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -143,7 +152,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/api/structgenif_1_1Tree.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -157,7 +166,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="struct-tree">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="struct-tree">
 <span id="exhale-struct-structgenif-1-1tree"></span><h1>Struct Tree<a class="headerlink" href="#struct-tree" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_src_gif_Tree.h.html#file-src-gif-tree-h"><span class="std std-ref">File Tree.h</span></a></p></li>
@@ -166,17 +199,17 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N5genif4TreeE">
-<span id="_CPPv3N5genif4TreeE"></span><span id="_CPPv2N5genif4TreeE"></span><span id="genif::Tree"></span><span class="target" id="structgenif_1_1Tree"></span><em class="property">struct </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Tree</code><a class="headerlink" href="#_CPPv4N5genif4TreeE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree"></span><em class="property">struct </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Tree</code><a class="headerlink" href="#_CPPv4N5genif4TreeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N5genif4Tree4TreeERK7MatrixX">
-<span id="_CPPv3N5genif4Tree4TreeERK7MatrixX"></span><span id="_CPPv2N5genif4Tree4TreeERK7MatrixX"></span><span id="genif::Tree::Tree__MatrixXCR"></span><span class="target" id="structgenif_1_1Tree_1ae7fa26b690e61b68d1642ad75222d7e2"></span><code class="sig-name descname">Tree</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif4Tree4TreeERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1ae7fa26b690e61b68d1642ad75222d7e2"></span><code class="sig-name descname">Tree</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<em>dataset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif4Tree4TreeERK7MatrixX" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N5genif4TreeD0Ev">
-<span id="_CPPv3N5genif4TreeD0Ev"></span><span id="_CPPv2N5genif4TreeD0Ev"></span><span id="genif::Tree::~Tree"></span><span class="target" id="structgenif_1_1Tree_1a8e49c9d5bdde63ce28284400a6199d8b"></span><code class="sig-name descname">~Tree</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif4TreeD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1a8e49c9d5bdde63ce28284400a6199d8b"></span><code class="sig-name descname">~Tree</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5genif4TreeD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -184,27 +217,27 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt id="_CPPv4N5genif4Tree5nodesE">
-<span id="_CPPv3N5genif4Tree5nodesE"></span><span id="_CPPv2N5genif4Tree5nodesE"></span><span id="genif::Tree::nodes__std::vector:TreeP:"></span><span class="target" id="structgenif_1_1Tree_1a2bbb9aed85c61e2eeeb2ff20c51ed9c8"></span>std::vector&lt;<a class="reference internal" href="#_CPPv4N5genif4TreeE" title="genif::Tree">Tree</a>*&gt; <code class="sig-name descname">nodes</code><a class="headerlink" href="#_CPPv4N5genif4Tree5nodesE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1a2bbb9aed85c61e2eeeb2ff20c51ed9c8"></span>std::vector&lt;<a class="reference internal" href="#_CPPv4N5genif4TreeE" title="genif::Tree">Tree</a>*&gt; <code class="sig-name descname">nodes</code><a class="headerlink" href="#_CPPv4N5genif4Tree5nodesE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif4Tree6parentE">
-<span id="_CPPv3N5genif4Tree6parentE"></span><span id="_CPPv2N5genif4Tree6parentE"></span><span id="genif::Tree::parent__TreeP"></span><span class="target" id="structgenif_1_1Tree_1a13c20c6d630f91d9863c34f7faf2d5c3"></span><a class="reference internal" href="#_CPPv4N5genif4TreeE" title="genif::Tree">Tree</a> *<code class="sig-name descname">parent</code><a class="headerlink" href="#_CPPv4N5genif4Tree6parentE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1a13c20c6d630f91d9863c34f7faf2d5c3"></span><a class="reference internal" href="#_CPPv4N5genif4TreeE" title="genif::Tree">Tree</a> *<code class="sig-name descname">parent</code><a class="headerlink" href="#_CPPv4N5genif4Tree6parentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif4Tree7datasetE">
-<span id="_CPPv3N5genif4Tree7datasetE"></span><span id="_CPPv2N5genif4Tree7datasetE"></span><span id="genif::Tree::dataset__MatrixXCR"></span><span class="target" id="structgenif_1_1Tree_1adfabdaaf2b4700d13faae8439cbfacd3"></span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<code class="sig-name descname">dataset</code><a class="headerlink" href="#_CPPv4N5genif4Tree7datasetE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1adfabdaaf2b4700d13faae8439cbfacd3"></span><em class="property">const</em> <a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a> &amp;<code class="sig-name descname">dataset</code><a class="headerlink" href="#_CPPv4N5genif4Tree7datasetE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif4Tree13vectorIndicesE">
-<span id="_CPPv3N5genif4Tree13vectorIndicesE"></span><span id="_CPPv2N5genif4Tree13vectorIndicesE"></span><span id="genif::Tree::vectorIndices__std::vector:unsigned-i:"></span><span class="target" id="structgenif_1_1Tree_1a92b3e308150f95f4b73d12392996f46b"></span>std::vector&lt;unsigned int&gt; <code class="sig-name descname">vectorIndices</code><a class="headerlink" href="#_CPPv4N5genif4Tree13vectorIndicesE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1a92b3e308150f95f4b73d12392996f46b"></span>std::vector&lt;unsigned int&gt; <code class="sig-name descname">vectorIndices</code><a class="headerlink" href="#_CPPv4N5genif4Tree13vectorIndicesE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif4Tree19representativeIndexE">
-<span id="_CPPv3N5genif4Tree19representativeIndexE"></span><span id="_CPPv2N5genif4Tree19representativeIndexE"></span><span id="genif::Tree::representativeIndex__unsigned-i"></span><span class="target" id="structgenif_1_1Tree_1add1641ef5ea4a3e54df5383003bfad54"></span>unsigned int <code class="sig-name descname">representativeIndex</code><a class="headerlink" href="#_CPPv4N5genif4Tree19representativeIndexE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1Tree_1add1641ef5ea4a3e54df5383003bfad54"></span>unsigned int <code class="sig-name descname">representativeIndex</code><a class="headerlink" href="#_CPPv4N5genif4Tree19representativeIndexE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -218,37 +251,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="classgenif_1_1BaggingEnsemble.html" class="btn btn-neutral float-right" title="Template Class BaggingEnsemble" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="structgenif_1_1OutlierDetectionResult.html" class="btn btn-neutral float-left" title="Struct OutlierDetectionResult" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="classgenif_1_1BaggingEnsemble.html" class="btn btn-neutral float-right" title="Template Class BaggingEnsemble" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structgenif_1_1OutlierDetectionResult.html" class="btn btn-neutral float-left" title="Struct OutlierDetectionResult" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 
+        &#169; Copyright .
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

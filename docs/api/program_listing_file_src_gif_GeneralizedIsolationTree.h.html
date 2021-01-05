@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Program Listing for File GeneralizedIsolationTree.h &mdash; Generalized Isolation Forest Documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -33,7 +36,9 @@
         <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -53,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+            <a href="../index.html" class="icon icon-home"> Generalized Isolation Forest
           
 
           
@@ -85,7 +90,9 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Advanced Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
 </ul>
@@ -128,6 +135,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -139,7 +148,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/api/program_listing_file_src_gif_GeneralizedIsolationTree.h.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -153,7 +162,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="program-listing-for-file-generalizedisolationtree-h">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="program-listing-for-file-generalizedisolationtree-h">
 <span id="program-listing-file-src-gif-generalizedisolationtree-h"></span><h1>Program Listing for File GeneralizedIsolationTree.h<a class="headerlink" href="#program-listing-for-file-generalizedisolationtree-h" title="Permalink to this headline">¶</a></h1>
 <p>↰ <a class="reference internal" href="file_src_gif_GeneralizedIsolationTree.h.html#file-src-gif-generalizedisolationtree-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/gif/GeneralizedIsolationTree.h</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef GENIF_GENERALIZEDISOLATIONTREE_H</span>
@@ -171,8 +204,8 @@
 <span class="k">namespace</span> <span class="n">genif</span> <span class="p">{</span>
     <span class="k">class</span> <span class="nc">GeneralizedIsolationTree</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Learner</span><span class="o">&lt;</span><span class="n">GIFModel</span><span class="p">,</span> <span class="n">OutlierDetectionResult</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
-        <span class="n">GeneralizedIsolationTree</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="k">const</span> <span class="n">GIFExitCondition</span><span class="o">&amp;</span> <span class="n">exitCondition</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">workerCount</span><span class="p">)</span> <span class="o">:</span>
-            <span class="n">_k</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">_workerCount</span><span class="p">(</span><span class="n">workerCount</span><span class="p">),</span> <span class="n">_exitCondition</span><span class="p">(</span><span class="n">exitCondition</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">GeneralizedIsolationTree</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="k">const</span> <span class="n">GIFExitCondition</span><span class="o">&amp;</span> <span class="n">exitCondition</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">workerCount</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seed</span> <span class="o">=</span> <span class="mi">-1</span><span class="p">)</span> <span class="o">:</span>
+            <span class="n">_k</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">_workerCount</span><span class="p">(</span><span class="n">workerCount</span><span class="p">),</span> <span class="n">_exitCondition</span><span class="p">(</span><span class="n">exitCondition</span><span class="p">),</span> <span class="n">_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">_k</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
                 <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;GeneralizedIsolationTree::GeneralizedIsolationTree: k needs to be at least two.&quot;</span><span class="p">);</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">_workerCount</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
@@ -202,7 +235,7 @@
             <span class="c1">// Delete the tree since we do not need it anymore.</span>
             <span class="k">delete</span> <span class="n">treeRoot</span><span class="p">;</span>
 
-            <span class="c1">// Create a SubmodularOutlierModel instance.</span>
+            <span class="c1">// Create a GIFModel instance.</span>
             <span class="n">GIFModel</span> <span class="n">resultModel</span><span class="p">;</span>
 
             <span class="c1">// Build matrix from leaf nodes.</span>
@@ -237,7 +270,7 @@
             <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">resultModel</span><span class="p">.</span><span class="n">dataMatrix</span><span class="o">-&gt;</span><span class="n">rows</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
                 <span class="n">resultModel</span><span class="p">.</span><span class="n">probabilitiesPerRegion</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">resultModel</span><span class="p">.</span><span class="n">countsPerRegion</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">data_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dataset</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
 
-            <span class="c1">// Asssign properties.</span>
+            <span class="c1">// Assign properties.</span>
             <span class="n">resultModel</span><span class="p">.</span><span class="n">dataKDTree</span> <span class="o">=</span> <span class="n">kdTree</span><span class="p">;</span>
             <span class="n">_model</span> <span class="o">=</span> <span class="n">resultModel</span><span class="p">;</span>
 
@@ -245,6 +278,9 @@
         <span class="p">}</span>
 
         <span class="n">Tree</span><span class="o">*</span> <span class="n">findTree</span><span class="p">(</span><span class="k">const</span> <span class="n">MatrixX</span><span class="o">&amp;</span> <span class="n">dataset</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Create PRNG.</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">default_random_engine</span> <span class="n">generator</span><span class="p">(</span><span class="n">_seed</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">?</span> <span class="nl">_seed</span> <span class="p">:</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">());</span>
+
             <span class="c1">// Initialize a tree.</span>
             <span class="n">Tree</span><span class="o">*</span> <span class="n">treeRoot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tree</span><span class="p">(</span><span class="n">dataset</span><span class="p">);</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dataset</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -270,17 +306,14 @@
                 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">shouldExit</span><span class="p">)</span> <span class="p">{</span>
                     <span class="c1">// Randomly sample representatives from node.</span>
                     <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">repIndices</span><span class="p">;</span>
-                    <span class="n">std</span><span class="o">::</span><span class="n">default_random_engine</span> <span class="n">generator</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">());</span>
                     <span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">distribution</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
                     <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">_k</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">distribution</span><span class="p">(</span><span class="n">generator</span><span class="p">);</span>
+                        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">[</span><span class="n">distribution</span><span class="p">(</span><span class="n">generator</span><span class="p">)];</span>
                         <span class="k">while</span> <span class="p">(</span><span class="n">repIndices</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">nextIndex</span><span class="p">)</span> <span class="o">!=</span> <span class="n">repIndices</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
-                            <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">distribution</span><span class="p">(</span><span class="n">generator</span><span class="p">);</span>
+                            <span class="n">nextIndex</span> <span class="o">=</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">vectorIndices</span><span class="p">[</span><span class="n">distribution</span><span class="p">(</span><span class="n">generator</span><span class="p">)];</span>
                         <span class="n">repIndices</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">nextIndex</span><span class="p">);</span>
                     <span class="p">}</span>
-                    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">clusterRepIndices</span><span class="p">;</span>
-                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">index</span> <span class="p">:</span> <span class="n">repIndices</span><span class="p">)</span>
-                        <span class="n">clusterRepIndices</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">clusterRepIndices</span><span class="p">(</span><span class="n">repIndices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">repIndices</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
 
                     <span class="c1">// Generate clustering.</span>
                     <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">clusters</span><span class="p">(</span><span class="n">clusterRepIndices</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
@@ -366,12 +399,13 @@
         <span class="p">}</span>
 
         <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Learner</span><span class="o">&lt;</span><span class="n">GIFModel</span><span class="p">,</span> <span class="n">OutlierDetectionResult</span><span class="o">&gt;&gt;</span> <span class="n">copy</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeneralizedIsolationTree</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_k</span><span class="p">,</span> <span class="n">_exitCondition</span><span class="p">,</span> <span class="n">_workerCount</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeneralizedIsolationTree</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_k</span><span class="p">,</span> <span class="n">_exitCondition</span><span class="p">,</span> <span class="n">_workerCount</span><span class="p">,</span> <span class="n">_seed</span><span class="p">);</span>
         <span class="p">}</span>
 
     <span class="k">private</span><span class="o">:</span>
         <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">_k</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
         <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">_workerCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">_seed</span><span class="p">;</span>
         <span class="k">const</span> <span class="n">GIFExitCondition</span><span class="o">&amp;</span> <span class="n">_exitCondition</span><span class="p">;</span>
         <span class="n">GIFModel</span> <span class="n">_model</span><span class="p">;</span>
     <span class="p">};</span>
@@ -387,28 +421,25 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 
+        &#169; Copyright .
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

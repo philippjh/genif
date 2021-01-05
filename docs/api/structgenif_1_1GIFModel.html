@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Struct GIFModel &mdash; Generalized Isolation Forest Documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -33,7 +36,9 @@
         <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -55,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Generalized Isolation Forest
+            <a href="../index.html" class="icon icon-home"> Generalized Isolation Forest
           
 
           
@@ -87,7 +92,9 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Advanced Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
 </ul>
@@ -130,6 +137,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -143,7 +152,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/api/structgenif_1_1GIFModel.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -157,7 +166,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="struct-gifmodel">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="struct-gifmodel">
 <span id="exhale-struct-structgenif-1-1gifmodel"></span><h1>Struct GIFModel<a class="headerlink" href="#struct-gifmodel" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_src_gif_GIFModel.h.html#file-src-gif-gifmodel-h"><span class="std std-ref">File GIFModel.h</span></a></p></li>
@@ -166,13 +199,13 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N5genif8GIFModelE">
-<span id="_CPPv3N5genif8GIFModelE"></span><span id="_CPPv2N5genif8GIFModelE"></span><span id="genif::GIFModel"></span><span class="target" id="structgenif_1_1GIFModel"></span><em class="property">struct </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">GIFModel</code><a class="headerlink" href="#_CPPv4N5genif8GIFModelE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel"></span><em class="property">struct </em><code class="sig-prename descclassname">genif<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">GIFModel</code><a class="headerlink" href="#_CPPv4N5genif8GIFModelE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A struct comprising the model information for Generalized Isolation Forests. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4NK5genif8GIFModel25getProbabilitiesPerRegionEv">
-<span id="_CPPv3NK5genif8GIFModel25getProbabilitiesPerRegionEv"></span><span id="_CPPv2NK5genif8GIFModel25getProbabilitiesPerRegionEv"></span><span id="genif::GIFModel::getProbabilitiesPerRegionC"></span><span class="target" id="structgenif_1_1GIFModel_1a22ca809f0bffee33b1f4e48e53533d8f"></span><em class="property">const</em> std::vector&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a>&gt; &amp;<code class="sig-name descname">getProbabilitiesPerRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif8GIFModel25getProbabilitiesPerRegionEv" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel_1a22ca809f0bffee33b1f4e48e53533d8f"></span><em class="property">const</em> std::vector&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a>&gt; &amp;<code class="sig-name descname">getProbabilitiesPerRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif8GIFModel25getProbabilitiesPerRegionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns a vector of probabiltities for each found region (higher probability indicate inlierness). <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>As stated above. </p>
 </dd>
@@ -182,7 +215,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK5genif8GIFModel18getCountsPerRegionEv">
-<span id="_CPPv3NK5genif8GIFModel18getCountsPerRegionEv"></span><span id="_CPPv2NK5genif8GIFModel18getCountsPerRegionEv"></span><span id="genif::GIFModel::getCountsPerRegionC"></span><span class="target" id="structgenif_1_1GIFModel_1af12c8e39d9b56f405b6b2ddf475b171e"></span><em class="property">const</em> std::vector&lt;unsigned long&gt; &amp;<code class="sig-name descname">getCountsPerRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif8GIFModel18getCountsPerRegionEv" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel_1af12c8e39d9b56f405b6b2ddf475b171e"></span><em class="property">const</em> std::vector&lt;unsigned long&gt; &amp;<code class="sig-name descname">getCountsPerRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5genif8GIFModel18getCountsPerRegionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns a vector of values, indicating how many vectors of the training data set fell into a particular region. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>As stated above. </p>
 </dd>
@@ -195,22 +228,22 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt id="_CPPv4N5genif8GIFModel22probabilitiesPerRegionE">
-<span id="_CPPv3N5genif8GIFModel22probabilitiesPerRegionE"></span><span id="_CPPv2N5genif8GIFModel22probabilitiesPerRegionE"></span><span id="genif::GIFModel::probabilitiesPerRegion__std::vector:data_t:"></span><span class="target" id="structgenif_1_1GIFModel_1a1b650c09387fc15715898a37915ff2d3"></span>std::vector&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a>&gt; <code class="sig-name descname">probabilitiesPerRegion</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel22probabilitiesPerRegionE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel_1a1b650c09387fc15715898a37915ff2d3"></span>std::vector&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a84185f7b293ed533326d880a961b3697.html#_CPPv4N5genif6data_tE" title="genif::data_t">data_t</a>&gt; <code class="sig-name descname">probabilitiesPerRegion</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel22probabilitiesPerRegionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif8GIFModel15countsPerRegionE">
-<span id="_CPPv3N5genif8GIFModel15countsPerRegionE"></span><span id="_CPPv2N5genif8GIFModel15countsPerRegionE"></span><span id="genif::GIFModel::countsPerRegion__std::vector:unsigned-l:"></span><span class="target" id="structgenif_1_1GIFModel_1a2f43d4b2b9bd1e748d5c1e03a03824eb"></span>std::vector&lt;unsigned long&gt; <code class="sig-name descname">countsPerRegion</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel15countsPerRegionE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel_1a2f43d4b2b9bd1e748d5c1e03a03824eb"></span>std::vector&lt;unsigned long&gt; <code class="sig-name descname">countsPerRegion</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel15countsPerRegionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif8GIFModel10dataMatrixE">
-<span id="_CPPv3N5genif8GIFModel10dataMatrixE"></span><span id="_CPPv2N5genif8GIFModel10dataMatrixE"></span><span id="genif::GIFModel::dataMatrix__std::shared_ptr:MatrixX:"></span><span class="target" id="structgenif_1_1GIFModel_1ad3309ff8c9686f78ee2bc7f72a6a3690"></span>std::shared_ptr&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a>&gt; <code class="sig-name descname">dataMatrix</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel10dataMatrixE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel_1ad3309ff8c9686f78ee2bc7f72a6a3690"></span>std::shared_ptr&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a>&gt; <code class="sig-name descname">dataMatrix</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel10dataMatrixE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N5genif8GIFModel10dataKDTreeE">
-<span id="_CPPv3N5genif8GIFModel10dataKDTreeE"></span><span id="_CPPv2N5genif8GIFModel10dataKDTreeE"></span><span id="genif::GIFModel::dataKDTree__std::shared_ptr:nanoflann::KDTreeEigenMatrixAdaptor:MatrixX::"></span><span class="target" id="structgenif_1_1GIFModel_1a4df2459b47cf9be16fd8c85881ba4427"></span>std::shared_ptr&lt;nanoflann::KDTreeEigenMatrixAdaptor&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a>&gt;&gt; <code class="sig-name descname">dataKDTree</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel10dataKDTreeE" title="Permalink to this definition">¶</a><br /></dt>
+<span class="target" id="structgenif_1_1GIFModel_1a4df2459b47cf9be16fd8c85881ba4427"></span>std::shared_ptr&lt;nanoflann::KDTreeEigenMatrixAdaptor&lt;<a class="reference internal" href="typedef_DataTypeHandling_8h_1a4894c0edfef6135b15ff1232fdf88e14.html#_CPPv4N5genif7MatrixXE" title="genif::MatrixX">MatrixX</a>&gt;&gt; <code class="sig-name descname">dataKDTree</code><a class="headerlink" href="#_CPPv4N5genif8GIFModel10dataKDTreeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -224,37 +257,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="structgenif_1_1OutlierDetectionResult.html" class="btn btn-neutral float-right" title="Struct OutlierDetectionResult" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="namespace_genif.html" class="btn btn-neutral float-left" title="Namespace genif" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="structgenif_1_1OutlierDetectionResult.html" class="btn btn-neutral float-right" title="Struct OutlierDetectionResult" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="namespace_genif.html" class="btn btn-neutral float-left" title="Namespace genif" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 
+        &#169; Copyright .
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
