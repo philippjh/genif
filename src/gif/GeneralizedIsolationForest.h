@@ -21,11 +21,12 @@ namespace genif {
          * the input vectors).
          * @param sigma Average pairwise kernel values of observations in a data sub-region, which should be exceeded for the exit condition to apply.
          * @param workerCount Number of parallel workers to consider (-1 defaults to all available cores).
+         * @param seed Seed to use for random number generation (-1 defaults to sysclock seed). Pass an integer for constant result across multiple runs.
          */
         GeneralizedIsolationForest(unsigned int k, unsigned int nModels, unsigned int sampleSize, const std::string& kernelId, const VectorX& kernelScaling, data_t sigma,
-                                   int workerCount = -1) :
+                                   int workerCount = -1, int seed = -1) :
             _exitCondition(kernelId, kernelScaling, sigma),
-            _gTree(k, _exitCondition, genif::Tools::handleWorkerCount(workerCount)), _gtrBagging(_gTree, nModels, sampleSize, genif::Tools::handleWorkerCount(workerCount)) {
+            _gTree(k, _exitCondition, genif::Tools::handleWorkerCount(workerCount), seed), _gtrBagging(_gTree, nModels, sampleSize, genif::Tools::handleWorkerCount(workerCount), seed) {
         }
 
         /**
