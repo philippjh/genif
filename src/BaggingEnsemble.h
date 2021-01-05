@@ -58,7 +58,7 @@ namespace genif {
             _models.clear();
 
             // Estimate new models.
-#pragma omp parallel for num_threads(_workerCount)
+#pragma omp parallel for ordered num_threads(_workerCount)
             for (unsigned int i = 0; i < _nModels; i++) {
                 // Take a copy of the base learner.
                 auto learnerCopy = _baseLearner.copy();
@@ -66,6 +66,7 @@ namespace genif {
                 // Sample dataset with replacement.
                 MatrixX sampledDataset(_sampleSize, dataset.cols());
                 for (unsigned int j = 0; j < _sampleSize; j++)
+#pragma omp ordered
                     sampledDataset.row(j) = dataset.row(distribution(generator));
 
                 // Fit base learner with sampled dataset.
