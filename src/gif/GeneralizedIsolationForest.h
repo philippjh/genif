@@ -44,18 +44,20 @@ namespace genif {
          * @return A vector, which indicates the probability of inlierness for every input vector.
          */
         VectorX predict(const MatrixX& dataset) const override {
-            // Get predictions.
-            const std::vector<OutlierDetectionResult>& predictions = _gtrBagging.predict(dataset);
+            if(_gtrBagging.getActualNumberOfModels() > 0) {
+                // Get predictions.
+                const std::vector<OutlierDetectionResult>& predictions = _gtrBagging.predict(dataset);
 
-            // Average over predictions.
-            VectorX y(dataset.rows());
-            for (unsigned int i = 0; i < dataset.rows(); i++) {
-                data_t predictionSum = 0.0;
-                for (unsigned int j = 0; j < _gtrBagging.getActualNumberOfModels(); j++)
-                    predictionSum += predictions[j].getProbabilities()[i];
-                y[i] = predictionSum / static_cast<data_t>(_gtrBagging.getActualNumberOfModels());
-            }
-            return y;
+                // Average over predictions.
+                VectorX y(dataset.rows());
+                for (unsigned int i = 0; i < dataset.rows(); i++) {
+                    data_t predictionSum = 0.0;
+                    for (unsigned int j = 0; j < _gtrBagging.getActualNumberOfModels(); j++)
+                        predictionSum += predictions[j].getProbabilities()[i];
+                    y[i] = predictionSum / static_cast<data_t>(_gtrBagging.getActualNumberOfModels());
+                }
+                return y;
+            } else throw std::runtime_error("GeneralizedIsolationForest::predict: Number of models is insufficient (maybe forgot to call `fit`?).");
         }
 
         /**
