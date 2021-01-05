@@ -60,7 +60,7 @@ with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding
 
 setup(
     name='genif',
-    version='0.0.3',
+    version='0.0.4',
     author='Philipp-Jan Honysz',
     author_email='philipp.honysz@udo.edu',
     description='Generalized Isolation Forest',
