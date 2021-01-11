@@ -30,3 +30,9 @@ Windows or macOS builds are currently **not** provided. Please resort to install
 - Recursively clone this repository by issueing `git clone --recurse-submodules git@github.com:philippjh/genif.git`
 - Change your working directory to the root of the repository. Run `pip3 install .`
 - The Python package manager will now build and install the package.
+
+## Acknowledgments
+
+Part of the work on this paper has been supported by Deutsche Forschungsgemeinschaft (DFG) within the Collaborative Research Center SFB 876 "Providing Information by 
+Resource-Constrained Analysis", project A1, http://sfb876.tu-dortmund.de and by the German Competence Center for Machine Learning Rhine Ruhr 
+(ML2R, https://www.ml2r.de, 01IS18038A), funded by the German Federal Ministry for Education and Research.  
