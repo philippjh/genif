@@ -21,7 +21,7 @@ exhale_args = {
     "doxygenStripFromPath": "..",
     "createTreeView": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin": "INPUT = ../src"
+    "exhaleDoxygenStdin": "INPUT = ../genif"
 }
 
 project = "Generalized Isolation Forest"
