@@ -8,6 +8,7 @@ find_package(OpenMP)
 
 # Include Eigen
 include_directories(lib/eigen)
+add_compile_definitions(EIGEN_MPL2_ONLY)
 
 # Include nanoflann
 include_directories(lib/nanoflann/include)

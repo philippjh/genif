@@ -54,9 +54,11 @@ class CMakeBuild(build_ext):
         subprocess.check_call(['cmake', ext.sourcedir] + cmake_args, cwd=self.build_temp, env=env)
         subprocess.check_call(['cmake', '--build', '.', '--target', 'genif'] + build_args, cwd=self.build_temp)
 
-# Read README.md file into memory.
+# Read README.md and ThirdPartyLicenses.md file into memory.
 with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+with open(path.join(path.abspath(path.dirname(__file__)), 'ThirdPartyLicenses.md'), encoding='utf-8') as f:
+    long_description += f.read()
 
 setup(
     name='genif',
