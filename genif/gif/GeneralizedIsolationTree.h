@@ -9,6 +9,7 @@
 #include <genif/OutlierDetectionResult.h>
 #include <nanoflann.hpp>
 #include <random>
+#include <set>
 
 namespace genif {
     class GeneralizedIsolationTree : public Learner<GIFModel, OutlierDetectionResult> {
