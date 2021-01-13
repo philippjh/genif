@@ -1,7 +1,7 @@
 #ifndef GENIF_OUTLIERDETECTIONRESULT_H
 #define GENIF_OUTLIERDETECTIONRESULT_H
 
-#include <src/io/DataTypeHandling.h>
+#include <genif/io/DataTypeHandling.h>
 
 namespace genif {
     /**

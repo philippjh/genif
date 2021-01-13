@@ -109,7 +109,17 @@ assume, that your project is also organized as a CMake project.
 To include GIF in your package follow these steps:
 
 1. `Optional:` Create a separate subdirectory holding library folders (e.g. ``lib``).
-2. **Recursively** clone GIF source code repository by issueing either ``git clone --recurse-submodules git@github.com:philippjh/genif.git`` or ``git submodule add --recurse-submodules git@github.com:philippjh/genif.git && git submodule update --init --recursive`` (for submodule enthusiasts).
+2. Recursively clone GIF source code repository by issueing either
+
+    .. code-block:: text
+
+        git clone --recurse-submodules git@github.com:philippjh/genif.git
+
+    or (for submodule enthusiasts)
+
+    .. code-block:: text
+
+        git submodule add --recurse-submodules git@github.com:philippjh/genif.git && git submodule update --init --recursive
 3. Add the subdirectory to your ``CMakeLists.txt`` file (i.e. ``add_subdirectory(lib/genif)``).
 4. Link "your" target to the "virtual" target ``libgenif``, which makes all necessary header files available to your project. This can be accomplished by ``target_link_libraries(yourtarget PUBLIC libgenif)``.
 
@@ -121,7 +131,7 @@ A short demonstrational listing may be given as follows:
 .. code-block:: c++
 
     #include <iostream>
-    #include <src/gif/GeneralizedIsolationForest.h>
+    #include <genif/gif/GeneralizedIsolationForest.h>
 
     int main() {
         // Create some parameters.

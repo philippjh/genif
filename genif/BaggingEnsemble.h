@@ -2,8 +2,8 @@
 #define GENIF_BAGGINGENSEMBLE_H
 
 #include <chrono>
+#include <genif/Learner.h>
 #include <random>
-#include <src/Learner.h>
 
 namespace genif {
     /**

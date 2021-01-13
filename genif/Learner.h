@@ -1,7 +1,7 @@
 #ifndef GENIF_LEARNER_H
 #define GENIF_LEARNER_H
 
-#include <src/io/DataTypeHandling.h>
+#include <genif/io/DataTypeHandling.h>
 
 namespace genif {
     /**

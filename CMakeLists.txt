@@ -8,6 +8,7 @@ find_package(OpenMP)
 
 # Include Eigen
 include_directories(lib/eigen)
+add_compile_definitions(EIGEN_MPL2_ONLY)
 
 # Include nanoflann
 include_directories(lib/nanoflann/include)
@@ -20,7 +21,7 @@ add_subdirectory(lib/pybind11)
 ###################################################################
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_CXX_STANDARD 14)
-pybind11_add_module(genif src/PythonBinding.cpp)
+pybind11_add_module(genif genif/PythonBinding.cpp)
 if(OpenMP_CXX_FOUND)
     target_link_libraries(genif PUBLIC OpenMP::OpenMP_CXX)
 endif()
