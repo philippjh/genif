@@ -1,8 +1,8 @@
+#include <genif/gif/GeneralizedIsolationForest.h>
+#include <genif/io/DataTypeHandling.h>
 #include <pybind11/eigen.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include <src/gif/GeneralizedIsolationForest.h>
-#include <src/io/DataTypeHandling.h>
 
 namespace py = pybind11;
 

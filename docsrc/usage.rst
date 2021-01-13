@@ -121,7 +121,7 @@ A short demonstrational listing may be given as follows:
 .. code-block:: c++
 
     #include <iostream>
-    #include <src/gif/GeneralizedIsolationForest.h>
+    #include <genif/gif/GeneralizedIsolationForest.h>
 
     int main() {
         // Create some parameters.

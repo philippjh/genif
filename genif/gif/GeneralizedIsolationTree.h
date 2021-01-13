@@ -5,10 +5,10 @@
 #include "GIFModel.h"
 #include "Tree.h"
 #include <chrono>
+#include <genif/Learner.h>
+#include <genif/OutlierDetectionResult.h>
 #include <nanoflann.hpp>
 #include <random>
-#include <src/Learner.h>
-#include <src/OutlierDetectionResult.h>
 
 namespace genif {
     class GeneralizedIsolationTree : public Learner<GIFModel, OutlierDetectionResult> {

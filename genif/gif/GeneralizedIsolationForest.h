@@ -2,11 +2,11 @@
 #define GENIF_GENERALIZEDISOLATIONFOREST_H
 
 #include "GeneralizedIsolationTree.h"
-#include <src/BaggingEnsemble.h>
-#include <src/Learner.h>
-#include <src/OutlierDetectionResult.h>
-#include <src/Tools.h>
-#include <src/gif/GIFModel.h>
+#include <genif/BaggingEnsemble.h>
+#include <genif/Learner.h>
+#include <genif/OutlierDetectionResult.h>
+#include <genif/Tools.h>
+#include <genif/gif/GIFModel.h>
 
 namespace genif {
     class GeneralizedIsolationForest : public Learner<std::vector<GIFModel>, VectorX> {

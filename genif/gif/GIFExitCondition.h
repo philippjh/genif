@@ -2,9 +2,9 @@
 #define GENIF_GIFEXITCONDITION_H
 
 #include "Tree.h"
-#include <src/kernels/Kernel.h>
-#include <src/kernels/MaternKernel.h>
-#include <src/kernels/RBFKernel.h>
+#include <genif/kernels/Kernel.h>
+#include <genif/kernels/MaternKernel.h>
+#include <genif/kernels/RBFKernel.h>
 
 namespace genif {
     /**

@@ -1,7 +1,7 @@
 #ifndef GENIF_TREE_H
 #define GENIF_TREE_H
 
-#include <src/io/DataTypeHandling.h>
+#include <genif/io/DataTypeHandling.h>
 
 namespace genif {
     struct Tree {
