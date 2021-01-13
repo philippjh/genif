@@ -62,7 +62,7 @@ with open(path.join(path.abspath(path.dirname(__file__)), 'ThirdPartyLicenses.md
 
 setup(
     name='genif',
-    version='1.0.0',
+    version='1.0.1',
     author='Philipp-Jan Honysz',
     author_email='philipp.honysz@udo.edu',
     description='Generalized Isolation Forest',
