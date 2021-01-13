@@ -293,9 +293,26 @@ quite the same.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">genif</span></code> sources are distributed as a “header-only” library within the CMake project model. Hence, no explicit compilation or linking is needed. For this section, we will
 assume, that your project is also organized as a CMake project.</p>
 <p>To include GIF in your package follow these steps:</p>
-<ol class="arabic simple">
-<li><p><cite>Optional:</cite> Create a separate subdirectory holding library folders (e.g. <code class="docutils literal notranslate"><span class="pre">lib</span></code>).</p></li>
-<li><p><strong>Recursively</strong> clone GIF source code repository by issueing either <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">--recurse-submodules</span> <span class="pre">git&#64;github.com:philippjh/genif.git</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">add</span> <span class="pre">--recurse-submodules</span> <span class="pre">git&#64;github.com:philippjh/genif.git</span> <span class="pre">&amp;&amp;</span> <span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span> <span class="pre">--recursive</span></code> (for submodule enthusiasts).</p></li>
+<ol class="arabic">
+    <li><p><cite>Optional:</cite> Create a separate subdirectory holding library folders (e.g. <code class="docutils literal notranslate"><span class="pre">lib</span></code>).</p>
+    </li>
+    <li><p>Recursively clone GIF source code repository by issueing either</p>
+        <blockquote>
+            <div>
+                <div class="highlight-text notranslate">
+                    <div class="highlight"><pre><span></span>git clone --recurse-submodules git@github.com:philippjh/genif.git
+</pre>
+                    </div>
+                </div>
+                <p>or (for submodule enthusiasts)</p>
+                <div class="highlight-text notranslate">
+                    <div class="highlight"><pre><span></span>git submodule add --recurse-submodules git@github.com:philippjh/genif.git &amp;&amp; git submodule update --init --recursive
+</pre>
+                    </div>
+                </div>
+            </div>
+        </blockquote>
+    </li>
 <li><p>Add the subdirectory to your <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file (i.e. <code class="docutils literal notranslate"><span class="pre">add_subdirectory(lib/genif)</span></code>).</p></li>
 <li><p>Link “your” target to the “virtual” target <code class="docutils literal notranslate"><span class="pre">libgenif</span></code>, which makes all necessary header files available to your project. This can be accomplished by <code class="docutils literal notranslate"><span class="pre">target_link_libraries(yourtarget</span> <span class="pre">PUBLIC</span> <span class="pre">libgenif)</span></code>.</p></li>
 </ol>
@@ -303,15 +320,21 @@ assume, that your project is also organized as a CMake project.</p>
 use an <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span></code> directive.</p>
 <p>A short demonstrational listing may be given as follows:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;src/gif/GeneralizedIsolationForest.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;genif/gif/GeneralizedIsolationForest.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Create some parameters.</span>
-    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nModels</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">sampleSize</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
-    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">kernelId</span> <span class="o">=</span> <span class="s">&quot;rbf&quot;</span><span class="p">;</span>
-    <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">kernelScaling</span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">::</span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">10</span><span
+            class="p">;</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nModels</span> <span class="o">=</span> <span
+            class="mi">100</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">sampleSize</span> <span class="o">=</span> <span class="mi">256</span><span
+            class="p">;</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">kernelId</span> <span class="o">=</span> <span
+            class="s">&quot;rbf&quot;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">kernelScaling</span> <span class="o">=</span> <span
+            class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">::</span><span class="n">Random</span><span class="p">(</span><span
+            class="mi">1</span><span class="p">);</span>
     <span class="k">const</span> <span class="kt">double</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">;</span>
     <span class="k">const</span> <span class="kt">int</span> <span class="n">workerCount</span> <span class="o">=</span> <span class="mi">-1</span><span class="p">;</span>
 

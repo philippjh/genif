@@ -3,7 +3,7 @@
 Class GeneralizedIsolationTree
 ==============================
 
-- Defined in :ref:`file_src_gif_GeneralizedIsolationTree.h`
+- Defined in :ref:`file_genif_gif_GeneralizedIsolationTree.h`
 
 
 Inheritance Relationships

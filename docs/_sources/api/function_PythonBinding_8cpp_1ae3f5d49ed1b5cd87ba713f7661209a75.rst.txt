@@ -3,7 +3,7 @@
 Function genif::PYBIND11_MODULE
 ===============================
 
-- Defined in :ref:`file_src_PythonBinding.cpp`
+- Defined in :ref:`file_genif_PythonBinding.cpp`
 
 
 Function Documentation

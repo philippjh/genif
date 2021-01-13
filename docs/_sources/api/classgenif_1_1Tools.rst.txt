@@ -3,7 +3,7 @@
 Class Tools
 ===========
 
-- Defined in :ref:`file_src_Tools.h`
+- Defined in :ref:`file_genif_Tools.h`
 
 
 Class Documentation

@@ -3,7 +3,7 @@
 Typedef genif::VectorX
 ======================
 
-- Defined in :ref:`file_src_io_DataTypeHandling.h`
+- Defined in :ref:`file_genif_io_DataTypeHandling.h`
 
 
 Typedef Documentation

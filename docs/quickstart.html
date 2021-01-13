@@ -442,12 +442,13 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>import numpy as np
-from genif import GeneralizedIsolationForest
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">genif</span> <span class="kn">import</span> <span class="n">GeneralizedIsolationForest</span>
 
-N = 1000
-d = 50
-X = np.random.random((N, d))
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span
+        class="n">random</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -457,8 +458,13 @@ X = np.random.random((N, d))
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>gif = GeneralizedIsolationForest(k=10, n_models=50, sample_size=256, kernel=&quot;rbf&quot;, kernel_scaling=[0.05], sigma=0.01)
-gif.fit_predict(X)[:50]
+<span></span><span class="n">gif</span> <span class="o">=</span> <span class="n">GeneralizedIsolationForest</span><span class="p">(</span><span class="n">k</span><span
+        class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_models</span><span class="o">=</span><span class="mi">50</span><span
+        class="p">,</span> <span class="n">sample_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">kernel</span><span
+        class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">kernel_scaling</span><span class="o">=</span><span class="p">[</span><span
+        class="mf">0.05</span><span class="p">],</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">gif</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[:</span><span
+        class="mi">50</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

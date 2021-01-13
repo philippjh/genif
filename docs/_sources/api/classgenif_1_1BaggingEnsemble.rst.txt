@@ -3,7 +3,7 @@
 Template Class BaggingEnsemble
 ==============================
 
-- Defined in :ref:`file_src_BaggingEnsemble.h`
+- Defined in :ref:`file_genif_BaggingEnsemble.h`
 
 
 Inheritance Relationships

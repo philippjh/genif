@@ -3,7 +3,7 @@
 Class RBFKernel
 ===============
 
-- Defined in :ref:`file_src_kernels_RBFKernel.h`
+- Defined in :ref:`file_genif_kernels_RBFKernel.h`
 
 
 Inheritance Relationships

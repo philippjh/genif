@@ -3,7 +3,7 @@
 Class GIFExitCondition
 ======================
 
-- Defined in :ref:`file_src_gif_GIFExitCondition.h`
+- Defined in :ref:`file_genif_gif_GIFExitCondition.h`
 
 
 Inheritance Relationships

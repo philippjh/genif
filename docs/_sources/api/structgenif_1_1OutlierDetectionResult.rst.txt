@@ -3,7 +3,7 @@
 Struct OutlierDetectionResult
 =============================
 
-- Defined in :ref:`file_src_OutlierDetectionResult.h`
+- Defined in :ref:`file_genif_OutlierDetectionResult.h`
 
 
 Struct Documentation

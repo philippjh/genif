@@ -11,22 +11,22 @@ Directories
 .. toctree::
    :maxdepth: 5
 
-   dir_src.rst
+   dir_genif.rst
 
 .. toctree::
    :maxdepth: 5
 
-   dir_src_gif.rst
+   dir_genif_gif.rst
 
 .. toctree::
    :maxdepth: 5
 
-   dir_src_io.rst
+   dir_genif_io.rst
 
 .. toctree::
    :maxdepth: 5
 
-   dir_src_kernels.rst
+   dir_genif_kernels.rst
 
 Files
 *****
@@ -35,69 +35,69 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_src_BaggingEnsemble.h.rst
+   file_genif_BaggingEnsemble.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_io_DataTypeHandling.h.rst
+   file_genif_io_DataTypeHandling.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_gif_GeneralizedIsolationForest.h.rst
+   file_genif_gif_GeneralizedIsolationForest.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_gif_GeneralizedIsolationTree.h.rst
+   file_genif_gif_GeneralizedIsolationTree.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_gif_GIFExitCondition.h.rst
+   file_genif_gif_GIFExitCondition.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_gif_GIFModel.h.rst
+   file_genif_gif_GIFModel.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_kernels_Kernel.h.rst
+   file_genif_kernels_Kernel.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_Learner.h.rst
+   file_genif_Learner.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_kernels_MaternKernel.h.rst
+   file_genif_kernels_MaternKernel.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_OutlierDetectionResult.h.rst
+   file_genif_OutlierDetectionResult.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_PythonBinding.cpp.rst
+   file_genif_PythonBinding.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_kernels_RBFKernel.h.rst
+   file_genif_kernels_RBFKernel.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_Tools.h.rst
+   file_genif_Tools.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_gif_Tree.h.rst
+   file_genif_gif_Tree.h.rst

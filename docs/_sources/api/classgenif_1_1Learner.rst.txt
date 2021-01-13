@@ -3,7 +3,7 @@
 Template Class Learner
 ======================
 
-- Defined in :ref:`file_src_Learner.h`
+- Defined in :ref:`file_genif_Learner.h`
 
 
 Class Documentation

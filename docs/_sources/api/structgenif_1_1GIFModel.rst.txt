@@ -3,7 +3,7 @@
 Struct GIFModel
 ===============
 
-- Defined in :ref:`file_src_gif_GIFModel.h`
+- Defined in :ref:`file_genif_gif_GIFModel.h`
 
 
 Struct Documentation

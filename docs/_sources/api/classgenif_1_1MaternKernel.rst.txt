@@ -3,7 +3,7 @@
 Class MaternKernel
 ==================
 
-- Defined in :ref:`file_src_kernels_MaternKernel.h`
+- Defined in :ref:`file_genif_kernels_MaternKernel.h`
 
 
 Inheritance Relationships
